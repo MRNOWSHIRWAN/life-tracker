@@ -55,6 +55,7 @@ app/src/main/java/.../Pings.java    stores ping rules, schedules exact or inexac
 app/src/main/java/.../PingReceiver  shows the notification and schedules the next day
 app/src/main/java/.../BootReceiver  restores alarms after reboot, update or time change
 app/src/main/AndroidManifest.xml    permissions and receivers
+app-icon.png.base64                 launcher icon (decoded to res/drawable/icon.png by build.sh)
 build.sh                            command-line build and sign
 ```
 
