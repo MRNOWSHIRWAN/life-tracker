@@ -4,3 +4,4 @@
 *.idsig
 build/
 local.properties
+app/src/main/res/drawable/icon.png
