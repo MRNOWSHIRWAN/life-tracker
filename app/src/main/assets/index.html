@@ -1,0 +1,288 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10151b"><title>Life tracker</title><style>body{margin:0;background:#10151b}.life{--bg:#10151b;--panel:#1b232c;--ink:#f1f5f7;--muted:#9aaab6;--line:#2c3944;--green:#75e2aa;background:var(--bg);color:var(--ink);padding:24px;border-radius:20px;font-family:system-ui,sans-serif;font-size:14px;line-height:1.5;max-width:1100px;margin:auto}.life[data-theme=light]{--bg:#f6f9f7;--panel:#fff;--ink:#15291f;--muted:#536a5c;--line:#d6e3da;--green:#187b4c}.life *{box-sizing:border-box}.life header{display:flex;align-items:center;justify-content:space-between;gap:8px}.life h1{font-size:32px;letter-spacing:-1.3px;margin:8px 0}.life h1 span{color:var(--green);padding-left:12px}.life p{margin:8px 0 20px}.life header p,.life .hint,.life footer{color:var(--muted)}.life .eyebrow{letter-spacing:2px;font-size:9px;color:var(--green);font-weight:700}.life button,.life input,.life textarea{font:inherit}.life button{border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);min-height:44px;padding:8px 12px;cursor:pointer;transition:background .18s,transform .18s}.life button:hover{filter:brightness(1.12)}.life button:active{transform:scale(.97)}.life button:focus-visible,.life input:focus-visible{outline:2px solid var(--green);outline-offset:2px}.life button:disabled{opacity:.35;cursor:default}.life .hero{margin-top:22px;padding:22px;border-radius:20px;background:var(--panel);display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line)}.life .hero small{font-size:10px;letter-spacing:2px;color:var(--green)}.life .hero h2{font-size:42px;margin:8px 0;line-height:1}.life .hero h2 span{font-size:21px;color:var(--muted)}.life .hero p{margin:0;color:var(--muted);font-size:12px}.life .ring{width:92px;height:92px;border-radius:50%;background:conic-gradient(var(--green) var(--p),var(--line) 0);display:grid;place-items:center}.life .ring b{display:grid;place-items:center;border-radius:50%;width:77px;height:77px;background:var(--panel);font-size:20px}.life .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0}.life .metrics>div{padding:12px 5px;background:var(--panel);border:1px solid var(--line);border-radius:14px;text-align:center}.life .metrics b{display:block;font-size:23px}.life .metrics small{font-size:10px;color:var(--muted)}.life nav{display:flex;overflow-x:auto;gap:5px;padding:8px 0;scrollbar-width:none}.life nav button{font-size:12px;flex-shrink:0;border:none;padding:9px 13px}.life nav .on,.life .primary{background:var(--green);color:var(--bg);font-weight:700}.life .status{font-size:11px;color:var(--muted);margin:8px 0 20px}.life section{margin:24px 0}.life section[hidden]{display:none}.life h2{font-size:19px;letter-spacing:-.4px;margin:0}.life h3{font-size:16px}.life .section-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px}.life .section-title b{padding:0 8px}.life .date-pick{display:flex;gap:8px;margin-bottom:15px}.life input:not([type=checkbox]),.life textarea{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:12px;border-radius:10px;min-height:44px;width:100%;min-width:0;color-scheme:dark}.life[data-theme=light] input,.life[data-theme=light] textarea{color-scheme:light}.life .habit{position:relative;display:flex;align-items:center;gap:12px;padding:15px 13px;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin:8px 0;cursor:pointer;min-height:70px}.life .habit input{position:absolute;opacity:0;width:25px;height:25px}.life .habit input:focus-visible+.tick{outline:2px solid var(--green)}.life .tick{border:1px solid var(--line);width:24px;height:24px;border-radius:8px;display:grid;place-items:center;flex-shrink:0}.life .habit.checked{border-color:var(--green)}.life .checked .tick{background:var(--green);color:var(--bg)}.life .habit b{display:block;font-size:14px}.life small{display:block;color:var(--muted)}.life .habit small{font-size:11px;margin-top:4px}.life .journal{display:block;margin:22px 0 12px}.life textarea{display:block;min-height:96px;margin-top:8px;resize:vertical}.life .hint{font-size:12px}.life .heat-scroll{overflow:auto;padding:5px 0;scrollbar-width:thin}.life .heat{display:grid;grid-template-rows:repeat(7,12px);grid-auto-flow:column;grid-auto-columns:12px;gap:4px;width:max-content}.life .sq{padding:0;min-height:12px;width:12px;height:12px;border-radius:3px;border:0}.life .l0{background:var(--line)}.life .l1{background:#1d5940}.life .l2{background:#278855}.life .l3{background:#46b978}.life .l4{background:#75e2aa}.life .sq.chosen{outline:2px solid var(--ink);outline-offset:1px}.life .sq.future{opacity:.28}.life .month-labels{width:850px;font-size:10px;color:var(--muted);word-spacing:28px;margin:0 0 8px}.life .legend{display:flex;align-items:center;justify-content:flex-end;gap:4px;font-size:10px;color:var(--muted);margin:12px 0}.life .legend i{height:12px;width:12px;border-radius:3px}.life .stat-row,.life .manage{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}.life .stat-row span{font-size:11px;color:var(--muted);text-align:right}.life form{display:grid;gap:9px;margin:15px 0}.life .manage>div:last-child{display:flex;gap:5px}.life .manage button{font-size:11px;padding:7px}.life details{border-top:1px solid var(--line);margin-top:20px;padding-top:14px}.life summary{font-weight:700;cursor:pointer;min-height:44px}.life .time-row{display:grid;grid-template-columns:100px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}.life .time-row>span{font-size:11px;color:var(--green)}.life .time-row small{font-size:12px;margin-top:5px}.life .import{display:block;margin-top:22px}.life .import input{margin-top:10px}.life footer{border-top:1px solid var(--line);padding-top:18px;font-size:10px}.life .toast{color:var(--green);font-size:12px;padding-top:8px}.life .date-pick input{flex:1}@media(min-width:768px){.life{padding:36px}.life .habit{padding:18px}.life header h1{font-size:40px}.life .hero{padding:30px}}@media(prefers-reduced-motion:reduce){.life *{transition:none!important;scroll-behavior:auto!important}}
+.life .year-controls{display:flex;align-items:center;flex-shrink:0}.life .year-controls button{padding:7px 10px}.life .section-title h2{font-size:17px}
+
+.life .quote{padding:16px 18px;border-left:3px solid var(--green);background:var(--panel);border-radius:0 14px 14px 0;margin-top:8px}.life .quote p{margin:8px 0;font-size:16px}.life .quote small{font-size:10px}.life .welcome{overflow-wrap:anywhere}.life .setup{border:1px solid var(--line);padding:16px;border-radius:14px}.life .plan-text{white-space:pre-wrap;overflow-wrap:anywhere}
+.life .stamp{display:block;color:var(--green);font-size:11px;margin-top:2px}.life .pinglabel{display:block;font-size:12px;margin:6px 0}.life .ping-warn{background:var(--panel);border-left:3px solid #e0a030;padding:10px 12px;margin:8px 0;border-radius:0 10px 10px 0;font-size:13px}</style></head><body><div id="root"></div><script>(() => {
+  // life-friends/src/data.js
+  var habits = [];
+
+  // life-friends/src/engine.js
+  var QUOTES = ["Small steps still move you forward.", "Keep the promise you can keep today.", "Start with one thing, then build from there.", "A fresh day is another chance to practice.", "Progress grows where attention goes.", "Make today a little better than yesterday.", "Rest is part of a steady rhythm.", "Show up before you feel ready.", "One focused minute beats another delay.", "Your next step matters more than your last mistake.", "Repeat the useful things. Let the noise pass.", "Build a day you can return to.", "A slow pace can still take you far.", "Choose effort over perfect timing.", "Protect the time for what matters.", "Consistency begins with the next attempt.", "You can begin again without starting over.", "Give small wins a place in your day.", "A clear plan makes the first step easier.", "Do the work, then let yourself rest.", "Less comparison, more practice.", "Every check-in is a vote for your future.", "Keep your goals kind and your actions clear.", "Learn from the day, not just the score.", "A setback can teach you the next move.", "Small habits make room for bigger change.", "Focus on what you can do now.", "Let patience work alongside effort.", "Finish one useful thing today.", "Your rhythm is yours to build.", "Make the easy choice the useful choice.", "A little preparation helps tomorrow breathe.", "Keep going gently. Keep going honestly.", "The first step does not need applause.", "Give your attention a direction.", "Be proud of practice, not only results.", "Take a break, then take the next step.", "Choose a goal that fits your real day.", "Make room for the person you are becoming.", "A calm restart is still a restart.", "Notice what works and do it again.", "Show yourself the patience you give others.", "Turn a good intention into one small action.", "You do not need a perfect day to make progress.", "Today is a chance to strengthen your rhythm.", "Let the next action be simple.", "Keep the habit small enough to repeat.", "Effort counts even when it feels quiet.", "Choose steady over rushed.", "Leave a little energy for tomorrow.", "A useful routine makes space for life.", "Your effort deserves your attention.", "Write the plan, then take one step.", "Growth can be quiet and still be real.", "Start where you are, with what you have.", "A missed day is a reason to return, not quit.", "Trust the work you repeat.", "Celebrate the action, then keep practicing.", "Your next good choice is within reach.", "Build momentum one honest day at a time."];
+  var dailyQuote = (d = today()) => QUOTES[Math.floor(Date.parse(d + "T12:00:00Z") / 864e5) % QUOTES.length];
+  var DAY = 864e5;
+  var today = () => new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit" }).format(/* @__PURE__ */ new Date());
+  var add = (d, n) => new Date(Date.parse(d + "T12:00:00Z") + n * DAY).toISOString().slice(0, 10);
+  var defaults = () => ({ version: 2, start: today(), theme: "dark", displayName: "", customPlan: "", habits: habits.map((h, i) => ({ id: i, name: h[1], time: h[2], note: h[4], from: today(), to: null })), next: 0 });
+  var esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+  var HHMM = /^([01]\d|2[0-3]):[0-5]\d$/;
+  var fmtTime = (iso, d) => { const t = new Date(iso); if (isNaN(t)) return ""; const day = new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit" }).format(t); return day === d ? t.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : t.toLocaleString([], { day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }); };
+  var tickLabel = (d, id) => { const iso = ((stamps[d] || {})[id]); if (iso) return `<small class="stamp">\u2713 Ticked ${esc(fmtTime(iso, d))}</small>`; return `<small class="stamp">\u2713 Tick time not recorded</small>`; };
+  var active = (h, d) => h.from <= d && (!h.to || d < h.to);
+  var bit = (log2, d, id) => (log2[d] || []).includes(id);
+  var count = (cfg2, log2, d) => cfg2.habits.filter((h) => active(h, d) && bit(log2, d, h.id)).length;
+  var due = (cfg2, d) => cfg2.habits.filter((h) => active(h, d)).length;
+  var full = (cfg2, log2, d) => due(cfg2, d) > 0 && count(cfg2, log2, d) === due(cfg2, d);
+  function streak(cfg2, log2, id = null, best = false) {
+    let cur = 0, max = 0;
+    let end = today();
+    const test = (d) => id === null ? full(cfg2, log2, d) : bit(log2, d, id);
+    if (!test(end)) end = add(end, -1);
+    for (let d = cfg2.start; d <= end; d = add(d, 1)) {
+      const h = id === null ? null : cfg2.habits.find((h2) => h2.id === id);
+      if (h && !active(h, d)) {
+        cur = 0;
+        continue;
+      }
+      cur = test(d) ? cur + 1 : 0;
+      max = Math.max(max, cur);
+    }
+    return best ? max : cur;
+  }
+  function render(cfg2, log2, notes2, ui2, status2) {
+    const t = today(), d = ui2.date, y = ui2.year, done = count(cfg2, log2, d), total = due(cfg2, d), live = cfg2.habits.filter((h) => active(h, t));
+    const days = Object.keys(log2).filter((d2) => (log2[d2] || []).length), checks = days.reduce((s, d2) => s + count(cfg2, log2, d2), 0);
+    let recent = [];
+    for (let n = 29; n >= 0; n--) recent.push(add(t, -n));
+    let possible = recent.filter((d2) => d2 >= cfg2.start).reduce((s, d2) => s + due(cfg2, d2), 0), hit = recent.reduce((s, d2) => s + count(cfg2, log2, d2), 0);
+    const yearDays = Math.round((Date.parse(`${y + 1}-01-01`) - Date.parse(`${y}-01-01`)) / DAY);
+    let squares = "";
+    const pad = ((/* @__PURE__ */ new Date(`${y}-01-01T12:00:00Z`)).getUTCDay() + 6) % 7;
+    for (let i = 0; i < pad; i++) squares += "<i></i>";
+    for (let n = 0; n < yearDays; n++) {
+      const k = add(`${y}-01-01`, n), c = count(cfg2, log2, k), den = due(cfg2, k), level = c ? Math.ceil(c / Math.max(1, den) * 4) : 0;
+      squares += `<button class="sq l${level} ${k === d ? "chosen" : ""} ${k > t ? "future" : ""}" data-date="${k}" title="${k}: ${c}/${den}" aria-label="${k}: ${c} of ${den}" ${k > t ? "disabled" : ""}></button>`;
+    }
+    return `<div class="life" data-theme="${cfg2.theme}"><header><div><small class="eyebrow">YOUR LIFE, ONE DAY AT A TIME</small><h1>Life tracker<span>\u221E</span></h1><p class="welcome">${cfg2.displayName ? `Welcome, ${esc(cfg2.displayName)}.` : "Welcome. Make this space yours."}</p></div><button data-action="theme" aria-label="Switch color theme">${cfg2.theme === "dark" ? "\u2600" : "\u263E"}</button></header><div class="quote"><small>YOUR DAILY SPARK</small><p>${esc(dailyQuote())}</p><small>Changes daily \xB7 built-in offline rotation</small></div>${!cfg2.displayName ? `<section class="setup"><h2>What should we call you?</h2><p class="hint">A local profile, not an online account. You can change it anytime in Profile.</p><form id="profileForm"><input id="displayName" aria-label="Your name" maxlength="40" required placeholder="Your name"><button class="primary" type="submit">Save name</button></form></section>` : ""}<div class="hero"><div><small>DAILY RHYTHM</small><h2>${done}<span> / ${total}</span></h2><p>${d === t ? "Today" : esc(d)} \xB7 habits complete</p></div><div class="ring" style="--p:${total ? done / total * 100 : 0}%"><b>${total ? Math.round(done / total * 100) : 0}%</b></div></div><div class="metrics"><div><b>${streak(cfg2, log2)}</b><small>Current streak</small></div><div><b>${streak(cfg2, log2, null, true)}</b><small>Best streak</small></div><div><b>${days.length}</b><small>Active days</small></div></div><nav>${["Today", "Insights", "Habits", "Plan", "Profile", "Backup"].map((a) => `<button data-tab="${a}" aria-pressed="${ui2.tab === a}" class="${ui2.tab === a ? "on" : ""}">${a}</button>`).join("")}</nav><p class="status" role="status">${esc(status2)}</p>
+<section ${ui2.tab === "Today" ? "" : "hidden"}><div class="section-title"><h2>Your daily checklist</h2><button data-action="today">Today</button></div><div class="date-pick"><button data-action="prev" aria-label="Previous day">\u2039</button><input id="date" aria-label="Checklist date" type="date" min="${cfg2.start}" max="${t}" value="${d}"><button data-action="next" aria-label="Next day" ${d >= t ? "disabled" : ""}>\u203A</button></div>${cfg2.habits.filter((h) => active(h, d)).map((h) => `<label class="habit ${bit(log2, d, h.id) ? "checked" : ""}"><input data-check="${h.id}" type="checkbox" ${bit(log2, d, h.id) ? "checked" : ""} ${d > t ? "disabled" : ""}><span class="tick">${bit(log2, d, h.id) ? "\u2713" : ""}</span><span><b>${esc(h.name)}</b><small>${esc(h.time)}${h.time ? " \xB7 " : ""}${h.remind ? "\u23F0 " + esc(h.remind) + " \xB7 " : ""}${streak(cfg2, log2, h.id)} day streak</small>${bit(log2, d, h.id) ? tickLabel(d, h.id) : ""}</span></label>`).join("") || "<p>No habits for this date. Add a habit in Habits.</p>"}<label class="journal">Daily reflection<textarea id="note" maxlength="240" placeholder="What worked? What is tomorrow\u2019s one priority?">${esc(notes2[d] || "")}</textarea></label><button class="primary" data-action="saveNote">Save reflection</button><p class="hint">All habits checked = one full day. An unfinished today does not break yesterday\u2019s streak.</p></section>
+<section ${ui2.tab === "Insights" || ui2.tab === "Today" ? "" : "hidden"}><div class="section-title"><h2>Your consistency</h2><div class="year-controls"><button data-action="yearPrev" aria-label="Previous year">\u2039</button><b>${y}</b><button data-action="yearNext" aria-label="Next year">\u203A</button></div></div><p class="hint">Yearly activity \xB7 tap a square to open its day</p><div class="heat-scroll"><div class="month-labels">Jan\u3000 Feb\u3000 Mar\u3000 Apr\u3000 May\u3000 Jun\u3000 Jul\u3000 Aug\u3000 Sep\u3000 Oct\u3000 Nov\u3000 Dec</div><div class="heat">${squares}</div></div><div class="legend">Less <i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i> More</div></section>
+<section ${ui2.tab === "Insights" ? "" : "hidden"}><h2>By the numbers</h2><div class="metrics"><div><b>${checks}</b><small>Total check-ins</small></div><div><b>${possible ? Math.round(hit / possible * 100) : 0}%</b><small>Last 30 days</small></div><div><b>${days.filter((d2) => full(cfg2, log2, d2)).length}</b><small>Full days</small></div></div><h3>Habit streaks</h3>${live.map((h) => `<div class="stat-row"><b>${esc(h.name)}</b><span>${streak(cfg2, log2, h.id)} now \xB7 ${streak(cfg2, log2, h.id, true)} best</span></div>`).join("")}<p class="hint">Rates use habits scheduled on each date. Renaming a habit preserves its check-ins. Archive starts tomorrow, so today\u2019s history stays intact.</p></section>
+<section ${ui2.tab === "Habits" ? "" : "hidden"}><div class="section-title"><h2>Make it yours</h2><span>${live.length} active</span></div><div class="pingstatus"></div><form id="habitForm"><input id="name" maxlength="60" required placeholder="Habit name" aria-label="Habit name"><input id="time" maxlength="50" placeholder="Time or cue (optional)" aria-label="Time or cue"><label class="pinglabel">Ping me daily at (optional)<input id="remind" type="time" aria-label="Ping time"></label><input id="detail" maxlength="140" placeholder="A helpful note (optional)" aria-label="Helpful note"><button class="primary" type="submit">Add habit</button></form><p class="hint">Archive instead of deleting your progress. There is no fixed habit limit; export backups regularly.</p>${live.map((h) => `<div class="manage"><div><b>${esc(h.name)}</b><small>${esc(h.time)}<br>${esc(h.note)}${h.remind ? "<br>\u23F0 Ping " + esc(h.remind) : ""}</small></div><div><button data-edit="${h.id}">Edit</button><button data-archive="${h.id}" ${h.to ? "disabled" : ""}>${h.to ? "Ends tomorrow" : "Archive"}</button></div></div>`).join("")}<div id="editor"></div><details><summary>Archived habits</summary>${cfg2.habits.filter((h) => !active(h, t)).map((h) => `<div class="stat-row"><b>${esc(h.name)}</b><small>Archived ${esc(h.to)}</small></div>`).join("") || "<p>None yet.</p>"}</details></section>
+<section ${ui2.tab === "Plan" ? "" : "hidden"}><h2>Your plan &amp; timetable</h2><div class="pingstatus"></div><p class="hint">No starter plan. Add your own goals, daily timetable and weekly routine.</p><div class="plan-text">${esc(cfg2.customPlan || "Your plan is blank. Write it below.")}</div><form id="planForm"><label>Your plan<textarea id="customPlan" aria-label="Your plan" maxlength="8000" placeholder="My goals, timetable and weekly routine...">${esc(cfg2.customPlan || "")}</textarea></label><button class="primary" type="submit">Save plan</button></form><p class="hint">Saved with your backup. Up to 8,000 characters.</p><h2>Timed pings</h2><p class="hint">Add a daily ping for a timetable item. It rings at that time every day, even when the app is closed.</p><form id="pingForm"><input id="pingLabel" maxlength="60" required placeholder="What to ping (e.g. Study block)" aria-label="Ping text"><input id="pingTime" type="time" required aria-label="Ping time"><button class="primary" type="submit">Add ping</button></form>${(cfg2.pings || []).map((p) => `<div class="manage"><div><b>${esc(p.label)}</b><small>\u23F0 Daily at ${esc(p.time)}</small></div><div><button data-delping="${p.id}">Remove</button></div></div>`).join("") || "<p>No timed pings yet.</p>"}</section>
+<section ${ui2.tab === "Profile" ? "" : "hidden"}><h2>Your profile</h2><p class="hint">Change your welcome name. This is saved locally, with no login or password.</p>${cfg2.displayName ? `<form id="profileForm"><input id="displayName" aria-label="Your name" maxlength="40" required value="${esc(cfg2.displayName)}"><button class="primary" type="submit">Save name</button></form>` : "<p>Use the name setup above to begin.</p>"}</section>
+<section ${ui2.tab === "Backup" ? "" : "hidden"}><h2>Your data, your control</h2><p>Saved on this device only. No account or cloud sync. Pings are local notifications on this phone. Keep backups before clearing storage or changing devices.</p><button class="primary" data-action="export">Download JSON backup</button><label class="import">Restore a backup<input id="import" type="file" accept="application/json,.json"></label><p class="hint">Restore replaces this app\u2019s local habits, check-ins and reflections after confirmation. Offline and hosted copies do not sync. There is no end date; storage is finite. If a save fails, export before leaving.</p></section><footer>Start ${esc(cfg2.start)} \xB7 device local time \xB7 built for the long run</footer><div class="toast" aria-live="polite">${esc(ui2.toast || "")}</div></div>`;
+  }
+  function valid(x) {
+    if (x?.cfg?.displayName !== void 0 && (typeof x.cfg.displayName !== "string" || x.cfg.displayName.length > 40)) return false;
+    if (x?.cfg?.pings !== void 0 && (!Array.isArray(x.cfg.pings) || x.cfg.pings.some((p) => !p || !Number.isInteger(p.id) || typeof p.label !== "string" || !p.label.trim() || p.label.length > 60 || !HHMM.test(p.time)))) return false;
+    if (x?.stamps !== void 0 && (typeof x.stamps !== "object" || !x.stamps || Array.isArray(x.stamps) || Object.entries(x.stamps).some(([d, m]) => !/^\d{4}-\d{2}-\d{2}$/.test(d) || typeof m !== "object" || !m || Array.isArray(m) || Object.values(m).some((v) => typeof v !== "string")))) return false;
+    if (x?.cfg?.customPlan !== void 0 && (typeof x.cfg.customPlan !== "string" || x.cfg.customPlan.length > 8e3)) return false;
+    if (!x || x.version !== 2 || !x.cfg || !/^\d{4}-\d{2}-\d{2}$/.test(x.cfg.start) || !Array.isArray(x.cfg.habits) || !Number.isInteger(x.cfg.next) || x.cfg.next < 0) return false;
+    let ids = /* @__PURE__ */ new Set();
+    for (const h of x.cfg.habits) {
+      if (!Number.isInteger(h.id) || h.id < 0 || ids.has(h.id) || typeof h.name !== "string" || !h.name.trim() || h.name.length > 60 || typeof h.from !== "string" || h.from < x.cfg.start || (h.remind !== void 0 && h.remind !== "" && !HHMM.test(h.remind))) return false;
+      ids.add(h.id);
+    }
+    if (x.cfg.habits.some((h) => h.id >= x.cfg.next)) return false;
+    for (const [d, n] of Object.entries(x.log || {})) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(d) || !Array.isArray(n) || n.some((id) => !Number.isInteger(id) || id < 0)) return false;
+    }
+    for (const [d, n] of Object.entries(x.notes || {})) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(d) || typeof n !== "string" || n.length > 240) return false;
+    }
+    return !!x.log && !!x.notes;
+  }
+  function attach(root2, get, save2, draw2) {
+    root2.onclick = (e) => {
+      const b = e.target.closest("button");
+      if (!b) return;
+      if (b.type === "submit" && b.closest("form")) {
+        e.preventDefault();
+        root2.onsubmit({ preventDefault() {
+        }, target: b.closest("form") });
+        return;
+      }
+      let { cfg: cfg2, log: log2, notes: notes2, ui: ui2 } = get();
+      const a = b.dataset.action;
+      if (b.dataset.tab) {
+        ui2.tab = b.dataset.tab;
+        ui2.toast = "";
+        draw2();
+        return;
+      }
+      if (b.dataset.date) {
+        ui2.date = b.dataset.date;
+        ui2.tab = "Today";
+        draw2();
+        return;
+      }
+      if (b.dataset.edit) {
+        const h = cfg2.habits.find((h2) => h2.id === +b.dataset.edit);
+        root2.querySelector("#editor").innerHTML = `<form id="editForm" data-id="${h.id}"><h3>Edit habit</h3><input id="editName" maxlength="60" required value="${esc(h.name)}" aria-label="Habit name"><input id="editTime" maxlength="50" value="${esc(h.time)}" aria-label="Habit time"><input id="editNote" maxlength="140" value="${esc(h.note)}" aria-label="Habit note"><label class="pinglabel">Ping me daily at (optional)<input id="editRemind" type="time" value="${esc(h.remind || "")}" aria-label="Ping time"></label><button type="submit" class="primary">Save changes</button></form>`;
+        root2.querySelector("#editName").focus();
+        return;
+      }
+      if (b.dataset.delping) {
+        save2({ cfg: { ...cfg2, pings: (cfg2.pings || []).filter((p) => p.id !== +b.dataset.delping) } });
+        return;
+      }
+      if (b.dataset.pingperm) { try { window.NativePing.requestPermission(); } catch (e) {} setTimeout(refreshPingStatus, 1500); return; }
+      if (b.dataset.archive) {
+        if (confirm("Archive this habit from tomorrow? Existing progress is kept.")) {
+          cfg2 = { ...cfg2, habits: cfg2.habits.map((h) => h.id === +b.dataset.archive ? { ...h, to: add(today(), 1) } : h) };
+          save2({ cfg: cfg2 });
+        }
+        return;
+      }
+      if (a === "theme") save2({ cfg: { ...cfg2, theme: cfg2.theme === "dark" ? "light" : "dark" } });
+      if (a === "today") {
+        ui2.date = today();
+        draw2();
+      }
+      if (a === "prev" || a === "next") {
+        ui2.date = add(ui2.date, a === "prev" ? -1 : 1);
+        if (ui2.date < cfg2.start) ui2.date = cfg2.start;
+        if (ui2.date > today()) ui2.date = today();
+        draw2();
+      }
+      if (a === "yearPrev" || a === "yearNext") {
+        ui2.year += a === "yearPrev" ? -1 : 1;
+        draw2();
+      }
+      if (a === "saveNote") {
+        save2({ notes: { ...notes2, [ui2.date]: root2.querySelector("#note").value } });
+        ui2.toast = "Reflection saved";
+        draw2();
+      }
+      if (a === "export") {
+        if(window.NativeBackup){window.NativeBackup.save(JSON.stringify({version:2,cfg:cfg2,log:log2,notes:notes2,stamps},null,2),`life-tracker-${today()}.json`);return;}
+const blob = new Blob([JSON.stringify({ version: 2, cfg: cfg2, log: log2, notes: notes2, stamps }, null, 2)], { type: "application/json" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `life-tracker-${today()}.json`;
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(link.href), 1e3);
+      }
+    };
+    root2.onchange = async (e) => {
+      let { cfg: cfg2, log: log2, notes: notes2, ui: ui2 } = get();
+      if (e.target.dataset.check !== void 0) {
+        const id = +e.target.dataset.check;
+        const previous = log2[ui2.date] || [];
+        const on = !previous.includes(id);
+        const st = { ...stamps, [ui2.date]: { ...(stamps[ui2.date] || {}) } };
+        if (on) st[ui2.date][id] = (/* @__PURE__ */ new Date()).toISOString(); else delete st[ui2.date][id];
+        save2({ stamps: st, log: { ...log2, [ui2.date]: on ? [...previous, id] : previous.filter((n) => n !== id) } });
+      }
+      if (e.target.id === "date") {
+        ui2.date = e.target.value || today();
+        if (ui2.date < cfg2.start) ui2.date = cfg2.start;
+        if (ui2.date > today()) ui2.date = today();
+        draw2();
+      }
+      if (e.target.id === "import") {
+        try {
+          const x = JSON.parse(await e.target.files[0].text());
+          if (!valid(x)) throw Error("Invalid backup");
+          if (confirm("Replace current local data with this backup? Export first if you need the current data.")) {
+            ui2.date = today();
+            save2({ cfg: x.cfg, log: x.log, notes: x.notes, stamps: x.stamps || {} });
+          }
+        } catch (err) {
+          ui2.toast = "Backup is invalid. Nothing changed.";
+          draw2();
+        }
+      }
+    };
+    root2.onsubmit = (e) => {
+      e.preventDefault();
+      let { cfg: cfg2, ui: ui2 } = get();
+      if (e.target.id === "profileForm") {
+        const displayName = root2.querySelector("#displayName").value.trim().slice(0, 40);
+        if (!displayName) return;
+        save2({ cfg: { ...cfg2, displayName } });
+        return;
+      }
+      if (e.target.id === "pingForm") {
+        const label = root2.querySelector("#pingLabel").value.trim().slice(0, 60), time = root2.querySelector("#pingTime").value;
+        if (!label || !HHMM.test(time)) return;
+        const pings = cfg2.pings || [];
+        save2({ cfg: { ...cfg2, pings: [...pings, { id: pings.reduce((m, p) => Math.max(m, p.id), 0) + 1, label, time }] } });
+        return;
+      }
+      if (e.target.id === "planForm") {
+        save2({ cfg: { ...cfg2, customPlan: root2.querySelector("#customPlan").value.slice(0, 8e3) } });
+        return;
+      }
+      if (e.target.id === "habitForm") {
+        const name = root2.querySelector("#name").value.trim();
+        if (!name) return;
+        save2({ cfg: { ...cfg2, next: cfg2.next + 1, habits: [...cfg2.habits, { id: cfg2.next, name, time: root2.querySelector("#time").value, note: root2.querySelector("#detail").value, remind: HHMM.test(root2.querySelector("#remind").value) ? root2.querySelector("#remind").value : "", from: today(), to: null }] } });
+      }
+      if (e.target.id === "editForm") {
+        const id = +e.target.dataset.id, name = root2.querySelector("#editName").value.trim();
+        if (!name) return;
+        save2({ cfg: { ...cfg2, habits: cfg2.habits.map((h) => h.id === id ? { ...h, name, time: root2.querySelector("#editTime").value, note: root2.querySelector("#editNote").value, remind: HHMM.test(root2.querySelector("#editRemind").value) ? root2.querySelector("#editRemind").value : "" } : h) } });
+      }
+    };
+  }
+
+  // life-friends/src/offline.js
+  var root = document.getElementById("root");
+  var status = "Saved on this device only \xB7 export backups regularly";
+  var cfg = defaults();
+  var log = {};
+  var notes = {};
+  var stamps = {};
+  try {
+    const s = JSON.parse(localStorage.getItem("life-tracker.friends.v2") || "null");
+    if (s && valid(s)) { ({ cfg, log, notes } = s); stamps = s.stamps || {}; }
+  } catch (e) {
+    status = "Storage unavailable. Export before closing this page.";
+  }
+  var ui = { date: today(), year: +today().slice(0, 4), tab: "Today", toast: "" };
+  function draw() {
+    root.innerHTML = render(cfg, log, notes, ui, status);
+    refreshPingStatus();
+  }
+  function save(v) {
+    if (v.cfg) cfg = v.cfg;
+    if (v.log) log = v.log;
+    if (v.notes) notes = v.notes;
+    if (v.stamps) stamps = v.stamps;
+    try {
+      localStorage.setItem("life-tracker.friends.v2", JSON.stringify({ version: 2, cfg, log, notes, stamps }));
+      status = "Saved on this device only \xB7 export backups regularly";
+    } catch (e) {
+      status = "Save failed. Export a backup before leaving; changes are only in this tab.";
+    }
+    draw();
+    syncPings();
+  }
+  function syncPings() {
+    if (!window.NativePing) return;
+    try {
+      const t = today(), list = [];
+      for (const h of cfg.habits) if (h.remind && HHMM.test(h.remind) && (!h.to || t < h.to)) list.push({ key: "h" + h.id, title: h.name, body: h.note || "Time for this habit", time: h.remind, skip: bit(log, t, h.id) ? t : "", until: h.to || "" });
+      for (const p of cfg.pings || []) list.push({ key: "p" + p.id, title: p.label, body: "Reminder", time: p.time, skip: "", until: "" });
+      window.NativePing.sync(JSON.stringify(list));
+    } catch (e) {}
+    refreshPingStatus();
+  }
+  function refreshPingStatus() {
+    let html = "";
+    try {
+      if (window.NativePing) {
+        const st = JSON.parse(window.NativePing.status());
+        if (!st.notifications) html = `<div class="ping-warn">Notifications are off, so pings cannot show. <button data-pingperm="1">Turn on</button></div>`;
+        else if (!st.exact) html = `<div class="ping-warn">Exact alarms are off. Pings may arrive a few minutes late. <button data-pingperm="1">Allow exact timing</button></div>`;
+      }
+    } catch (e) {}
+    document.querySelectorAll(".pingstatus").forEach((el) => { el.innerHTML = html; });
+  }
+  attach(root, () => ({ cfg, log, notes, ui }), save, draw);
+  draw();
+  syncPings();
+  var shownDay = today();
+  function refreshDay() {
+    if (shownDay !== today()) {
+      shownDay = today();
+      ui.date = today();
+      ui.year = +today().slice(0, 4);
+      draw();
+      syncPings();
+    }
+  }
+  document.addEventListener("visibilitychange", () => { refreshDay(); syncPings(); });
+  setInterval(refreshDay, 6e4);
+})();
+</script></body></html>
