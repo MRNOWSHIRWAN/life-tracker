@@ -2,7 +2,7 @@
 
 A private, offline habit and daily-routine tracker for Android. No account, no internet, no ads. Everything stays on your phone.
 
-**Version 1.3.0** - package `com.lifetracker.app` - Android 8.0 or newer.
+**Version 1.3.1** - package `com.lifetracker.app` - Android 8.0 or newer.
 
 ## What it does
 - Daily checklist with streaks, a year heatmap, insights and a daily reflection note.
@@ -23,7 +23,7 @@ A private, offline habit and daily-routine tracker for Android. No account, no i
 Check the file before you install: its SHA-256 is listed on the release page.
 
 ### Updating from 1.2.0
-Version 1.3.0 uses the same signing key as 1.2.0, so you can install it straight over 1.2.0. Your habits, pings and backups stay. It is still a good idea to download a backup first.
+Version 1.3.1 uses the same signing key as 1.3.0 and 1.2.0, so you can install it straight over either. It adds the new app icon. Your habits, pings and backups stay. It is still a good idea to download a backup first.
 
 ### Updating from 1.1.x (read this first)
 Version 1.2.0 is signed with a **new key**, so Android will not install it over 1.1.x. You must uninstall the old version first, and **uninstalling deletes your data**. Keep it like this:
