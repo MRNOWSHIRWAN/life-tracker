@@ -2,13 +2,14 @@
 
 A private, offline habit and daily-routine tracker for Android. No account, no internet, no ads. Everything stays on your phone.
 
-**Version 1.2.0** - package `com.lifetracker.app` - Android 8.0 or newer.
+**Version 1.3.0** - package `com.lifetracker.app` - Android 8.0 or newer.
 
 ## What it does
 - Daily checklist with streaks, a year heatmap, insights and a daily reflection note.
 - Make your own habits: name, time or cue, note.
 - **Daily pings (new in 1.2):** set a time on any habit, or add timed pings in the Plan tab. You get a notification at that time every day, even when the app is closed. Pings come back after a reboot, a time change or an app update.
 - **Tick times (new in 1.2):** when you tick a habit, the app records and shows the time ("Ticked 9:41 PM").
+- **Aspirants section (new in 1.3):** track any exam (NEET, JEE, UPSC, boards, anything you add). Exam countdown, syllabus tracker (subjects, chapters, topics with Not started / Learning / Done / Revised), progress and daily pace, a "Focus today" list, a lagging-subject detector, and a subject-wise mock test log with trends.
 - Your own name, plan and timetable. Light and dark theme.
 - JSON backup and restore.
 - The app has no internet permission.
@@ -20,6 +21,9 @@ A private, offline habit and daily-routine tracker for Android. No account, no i
 4. Allow notifications when asked. If you dismissed it, a banner on the Habits and Plan tabs has a **Turn on** button. For on-time pings, also allow **exact alarms** when the banner offers it (Android 12 and newer).
 
 Check the file before you install: its SHA-256 is listed on the release page.
+
+### Updating from 1.2.0
+Version 1.3.0 uses the same signing key as 1.2.0, so you can install it straight over 1.2.0. Your habits, pings and backups stay. It is still a good idea to download a backup first.
 
 ### Updating from 1.1.x (read this first)
 Version 1.2.0 is signed with a **new key**, so Android will not install it over 1.1.x. You must uninstall the old version first, and **uninstalling deletes your data**. Keep it like this:
@@ -132,10 +136,27 @@ If notifications are off, a banner with a Turn on button appears. Pings cannot s
 
 <img src="docs/screenshots/14-notification-banner.png" width="260" alt="Notification permission">
 
+### 15. Aspirants: overview (new in 1.3)
+Open the Aspirants tab and tap Add exam. Enter the exam name and its date. You get a day countdown, your syllabus progress, the daily pace needed, and a Focus today list.
+
+<img src="docs/screenshots/15-aspirants-overview.png" width="260" alt="Aspirants overview">
+
+### 16. Aspirants: syllabus
+Add subjects, then use Quick add topics: paste one topic per line, and start a line with # for a chapter name. Tap a status button to move a topic from Not started to Learning, Done and Revised. The app starts empty: you add your own exam, subjects and topics.
+
+<img src="docs/screenshots/16-aspirants-syllabus.png" width="260" alt="Aspirants syllabus">
+
+### 17. Aspirants: mock tests
+Log each mock test with marks and maximum per subject, and optionally mark weak topics. You get subject-wise average, last, best and a trend line. A subject is flagged as lagging when it is more than 10 points behind schedule, or its last 3 mock scores average below 50%.
+
+<img src="docs/screenshots/17-aspirants-mock-results.png" width="260" alt="Aspirants mock results">
+
+Aspirants data is saved on the phone and included in the JSON backup. You can add several exams and switch between them.
+
 Notes: pings need notification permission, and on some phones exact alarms or battery settings. Entries ticked before version 1.2 show "Tick time not recorded".
 
 ## Privacy
 Data lives in the app's local storage on your phone. Backups are files you choose where to save. Nothing is uploaded. Keep backups private: they contain your habits, notes and tick times.
 
 ## Status
-Built and checked in a desktop browser harness and by static APK checks. Real-phone behaviour of notifications, permissions and reboot rescheduling is new in 1.2.0, so please report problems in Issues, with your phone model and Android version.
+Built and checked in a desktop browser harness and by static APK checks. The Aspirants section in 1.3.0 was tested in a desktop browser harness (add, edit, delete, backup and restore, light and dark themes) and the APK was built and signature-checked, but it has not been run on a physical phone by the author yet. Please report problems in Issues, with your phone model and Android version.
