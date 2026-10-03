@@ -2,7 +2,307 @@
 .life .year-controls{display:flex;align-items:center;flex-shrink:0}.life .year-controls button{padding:7px 10px}.life .section-title h2{font-size:17px}
 
 .life .quote{padding:16px 18px;border-left:3px solid var(--green);background:var(--panel);border-radius:0 14px 14px 0;margin-top:8px}.life .quote p{margin:8px 0;font-size:16px}.life .quote small{font-size:10px}.life .welcome{overflow-wrap:anywhere}.life .setup{border:1px solid var(--line);padding:16px;border-radius:14px}.life .plan-text{white-space:pre-wrap;overflow-wrap:anywhere}
-.life .stamp{display:block;color:var(--green);font-size:11px;margin-top:2px}.life .pinglabel{display:block;font-size:12px;margin:6px 0}.life .ping-warn{background:var(--panel);border-left:3px solid #e0a030;padding:10px 12px;margin:8px 0;border-radius:0 10px 10px 0;font-size:13px}</style></head><body><div id="root"></div><script>(() => {
+.life .stamp{display:block;color:var(--green);font-size:11px;margin-top:2px}.life .pinglabel{display:block;font-size:12px;margin:6px 0}.life .ping-warn{background:var(--panel);border-left:3px solid #e0a030;padding:10px 12px;margin:8px 0;border-radius:0 10px 10px 0;font-size:13px}.life .asp-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}.life .asp-card h3{margin:0 0 8px;font-size:16px}.life .asp h4{margin:14px 0 6px;font-size:13px;color:var(--muted)}.life .asp p{margin:8px 0}.life .asp-exams,.life .asp-sub{display:flex;gap:6px;overflow-x:auto;padding:4px 0;scrollbar-width:none}.life .asp-chip,.life .asp-sub button{flex-shrink:0;min-height:40px;border-radius:20px;padding:6px 14px;font-size:13px}.life .asp-chip.on,.life .asp-sub .on{background:var(--green);color:var(--bg);font-weight:700;border-color:var(--green)}.life .asp-chip.add{border-style:dashed}.life .asp-sub{margin:8px 0}.life .asp-sub button{flex:1;border-radius:12px}.life .asp-l{display:block;font-size:12px;color:var(--muted);margin:10px 0}.life .asp-l input,.life .asp-l select,.life .asp select{margin-top:6px;display:block}.life .asp select{width:100%;min-height:44px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:10px}.life .asp-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.life .asp-danger{color:#ff8a80;border-color:#5a2c2c}.life .asp-err{color:#ff8a80;font-size:13px}.life .asp-ok{color:var(--green);font-size:13px;background:var(--panel);border-left:3px solid var(--green);padding:8px 12px;border-radius:0 10px 10px 0}.life .asp-count{display:flex;justify-content:space-between;align-items:center;gap:12px}.life .asp-big{font-size:64px;font-weight:800;line-height:1;letter-spacing:-2px;color:var(--green)}.life .asp-lab{font-size:14px;color:var(--muted)}.life .asp-meta{display:flex;flex-direction:column;gap:4px;align-items:flex-end;text-align:right;font-size:12px;color:var(--muted)}.life .asp-meta b{color:var(--ink);font-size:15px;overflow-wrap:anywhere}.life .asp-meta button{min-height:36px;font-size:12px;margin-top:6px}.life .asp-prog{display:flex;align-items:center;gap:18px}.life .asp-ring{width:96px;height:96px;flex-shrink:0;border-radius:50%;background:conic-gradient(var(--green) var(--p),var(--line) 0);display:grid;place-items:center}.life .asp-ring b{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:var(--panel);font-size:21px}.life .asp-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1}.life .asp-stats b{font-size:20px;display:block}.life .asp-stats small{font-size:11px}.life .asp-subrow{margin:12px 0}.life .asp-subtop{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.life .asp-bar{display:flex;height:10px;border-radius:5px;background:var(--line);overflow:hidden;margin:7px 0 4px}.life .asp-bar i{display:block;height:100%}.life .asp i.s3,.life .asp .asp-legend .s3{background:#75e2aa}.life .asp i.s2,.life .asp .asp-legend .s2{background:#3fae7a}.life .asp i.s1,.life .asp .asp-legend .s1{background:#e0a030}.life .asp-legend{font-size:11px;color:var(--muted);display:flex;gap:6px;align-items:center;flex-wrap:wrap}.life .asp-legend i{display:inline-block;width:10px;height:10px;border-radius:3px}.life .asp-badge{font-size:11px;padding:3px 9px;border-radius:10px;border:1px solid var(--line);white-space:nowrap}.life .b-lag{background:#3a2420;color:#ffab91;border-color:#6a3a30}.life .b-ok{color:var(--green);border-color:var(--green)}.life .b-ahead{background:var(--green);color:var(--bg);font-weight:700}.life .b-empty{color:var(--muted)}.life[data-theme=light] .b-lag{background:#fde8e2;color:#a33a20}.life .asp-focus{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--line)}.life .asp-focus.sm{padding:6px 0}.life .asp-focus b{display:block;overflow-wrap:anywhere}.life .asp-focus small{font-size:11px}.life .asp-edit{display:flex;gap:6px;margin:8px 0;align-items:center}.life .asp-edit input{flex:1}.life .asp textarea{min-height:120px;margin:6px 0}.life .asp-fold{border:0;background:none;font-weight:700;font-size:16px;text-align:left;padding:4px 0;flex:1;overflow-wrap:anywhere}.life .asp-tools{display:flex;gap:8px;margin:8px 0}.life .asp-tools button{font-size:12px;min-height:36px}.life .asp-chap{margin:12px 0 4px;padding-left:10px;border-left:2px solid var(--line)}.life .asp-chaphead{display:flex;justify-content:space-between;align-items:center;gap:8px}.life .asp-mini button{min-height:34px;min-width:34px;padding:2px 6px;font-size:13px;border:0;background:none}.life .asp-topic{display:flex;align-items:center;gap:8px;padding:5px 0}.life .asp-tn{flex:1;overflow-wrap:anywhere;font-size:13px}.life .asp-tn em{font-size:10px;color:#ffab91;font-style:normal;border:1px solid #6a3a30;padding:1px 6px;border-radius:8px;margin-left:4px}.life .asp-st{flex-shrink:0;min-width:92px;min-height:36px;font-size:11px;border-radius:10px;padding:4px 8px}.life .asp-st.s1{background:#e0a030;color:#241a00;border-color:#e0a030}.life .asp-st.s2{background:#3fae7a;color:#04210f;border-color:#3fae7a}.life .asp-st.s3{background:#75e2aa;color:#04210f;border-color:#75e2aa;font-weight:700}.life .asp-score{display:grid;grid-template-columns:1fr 84px 10px 84px;gap:6px;align-items:center;margin:8px 0}.life .asp-score input{padding:8px}.life .asp-weak{margin:12px 0}.life .asp-chk{display:flex;align-items:center;gap:8px;font-size:13px;padding:5px 0}.life .asp-chk input{width:20px;height:20px}.life .asp-trow{display:grid;grid-template-columns:1.3fr .7fr 1fr .7fr 100px;gap:4px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:12px}.life .asp-th{font-size:10px;color:var(--muted);border-top:0}.life .asp-trow em{font-style:normal;font-size:10px;margin-left:3px}.life .asp-trow .up{color:var(--green)}.life .asp-trow .dn{color:#ff8a80}.life .asp-spark{color:var(--green);display:block;max-width:100%}.life .asp-mock{padding:10px 0;border-top:1px solid var(--line)}.life .asp-mock button{font-size:11px;min-height:32px;margin-top:6px}.life .asp-hero h2{font-size:24px}@media(max-width:420px){.life .asp-big{font-size:52px}.life .asp-trow{grid-template-columns:1.2fr .7fr 1.1fr .7fr 70px}.life .asp-spark{width:70px}}
+</style></head><body><div id="root"></div><script>(function(){
+var KEY='life-tracker.aspirant.v1',DAY=864e5,ST=['Not started','Learning','Done','Revised'];
+var fmtD=function(d){return new Intl.DateTimeFormat('en-CA',{year:'numeric',month:'2-digit',day:'2-digit'}).format(d)};
+var today=function(){return fmtD(new Date())};
+var addD=function(d,n){return new Date(Date.parse(d+'T12:00:00Z')+n*DAY).toISOString().slice(0,10)};
+var diff=function(a,b){return Math.round((Date.parse(a+'T12:00:00Z')-Date.parse(b+'T12:00:00Z'))/DAY)};
+var pretty=function(d){try{return new Date(d+'T12:00:00Z').toLocaleDateString(undefined,{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'})}catch(e){return d}};
+var DATE=/^\d{4}-\d{2}-\d{2}$/;
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+var clamp=function(n,a,b){return Math.max(a,Math.min(b,n))};
+var okMsg='';var A={v:1,next:1,active:null,exams:[]},mount=null,ui={sub:'Overview',open:{},edit:null,adding:false,filter:'all',msg:'',cfgOpen:false};
+function valid(x){
+ try{
+  if(!x||x.v!==1||!Array.isArray(x.exams)||!Number.isInteger(x.next))return false;
+  var ids={};var use=function(i){if(!Number.isInteger(i)||i<1||ids[i]||i>=x.next)return false;ids[i]=1;return true};
+  for(var e of x.exams){
+   if(!use(e.id)||typeof e.name!=='string'||!e.name.trim()||e.name.length>80||!DATE.test(e.date)||!DATE.test(e.start)||!Number.isInteger(e.buffer)||e.buffer<0||e.buffer>180||!Array.isArray(e.subjects)||!Array.isArray(e.mocks))return false;
+   for(var s of e.subjects){if(!use(s.id)||typeof s.name!=='string'||!s.name.trim()||s.name.length>80||!Array.isArray(s.chapters))return false;
+    for(var c of s.chapters){if(!use(c.id)||typeof c.name!=='string'||c.name.length>100||!Array.isArray(c.topics))return false;
+     for(var t of c.topics){if(!use(t.id)||typeof t.name!=='string'||!t.name.trim()||t.name.length>140||![0,1,2,3].includes(t.st)||(t.at!=null&&!DATE.test(t.at)))return false}}}
+   for(var m of e.mocks){if(!use(m.id)||typeof m.name!=='string'||m.name.length>80||!DATE.test(m.date)||!m.scores||typeof m.scores!=='object'||!Array.isArray(m.weak))return false;
+    for(var k in m.scores){var v=m.scores[k];if(!v||typeof v.m!=='number'||typeof v.x!=='number'||!isFinite(v.m)||!isFinite(v.x)||v.x<=0)return false}
+    if(m.weak.some(function(i){return !Number.isInteger(i)}))return false}
+  }
+  if(x.active!=null&&!x.exams.some(function(e){return e.id===x.active}))return false;
+  return true;
+ }catch(err){return false}
+}
+function load(){try{var s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&valid(s))A=s}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(A));ui.msg=''}catch(e){ui.msg='Could not save. Export a backup now.'}}
+function nid(){return A.next++}
+function cur(){return A.exams.find(function(e){return e.id===A.active})||A.exams[0]||null}
+function flat(ex){var r=[];ex.subjects.forEach(function(s){s.chapters.forEach(function(c){c.topics.forEach(function(t){r.push({s:s,c:c,t:t})})})});return r}
+function counts(list){var n=[0,0,0,0];list.forEach(function(x){n[x.t?x.t.st:x.st]++});return n}
+function mockPct(m,sid){var v=m.scores[sid];return v?v.m/v.x*100:null}
+function totalPct(m){var a=0,b=0;for(var k in m.scores){a+=m.scores[k].m;b+=m.scores[k].x}return b>0?a/b*100:null}
+function sortedMocks(ex){return ex.mocks.slice().sort(function(a,b){return a.date<b.date?-1:a.date>b.date?1:a.id-b.id})}
+function analyze(ex){
+ var t=today(),all=flat(ex),n=counts(all),total=all.length,done=n[2]+n[3];
+ var daysLeft=diff(ex.date,t),finishBy=addD(ex.date,-ex.buffer),toFinish=Math.max(0,diff(finishBy,t));
+ var span=diff(finishBy,ex.start),el=diff(t,ex.start),exp=span>0?clamp(el/span,0,1)*100:(diff(t,finishBy)>=0?100:0);
+ var rem=total-done,pace=rem>0?(toFinish>0?Math.ceil(rem/toFinish):rem):0;
+ var mocks=sortedMocks(ex),weakCount={};mocks.forEach(function(m){m.weak.forEach(function(i){weakCount[i]=(weakCount[i]||0)+1})});
+ var subs=ex.subjects.map(function(s){
+  var ts=[];s.chapters.forEach(function(c){c.topics.forEach(function(tp){ts.push(tp)})});
+  var c=counts(ts),tot=ts.length,dn=c[2]+c[3],pct=tot?dn/tot*100:0;
+  var ms=mocks.map(function(m){return mockPct(m,s.id)}).filter(function(v){return v!=null});
+  var last3=ms.slice(-3),avg=last3.length?last3.reduce(function(a,b){return a+b},0)/last3.length:null;
+  var lag=tot?exp-pct:0,behind=tot>0&&rem>0&&lag>10,weak=avg!=null&&avg<50;
+  var status=weak?'lag':!tot?'empty':behind?'lag':(el>=7&&lag<-10&&(avg==null||avg>=60))?'ahead':'ok';
+  return {s:s,tot:tot,c:c,dn:dn,pct:pct,avg:avg,lag:lag,behind:behind,weak:weak,status:status,score:(behind?lag:0)+(weak?(50-avg):0)+(weak&&behind?5:0)};
+ });
+ var lagging=subs.filter(function(x){return x.status==='lag'}).sort(function(a,b){return b.score-a.score});
+ var targetSubs=lagging.length?lagging:subs.filter(function(x){return x.tot>0&&x.dn<x.tot}).sort(function(a,b){return a.pct-b.pct}).slice(0,1);
+ function items(sx,limit){
+  var out=[],seen={};
+  var push=function(o,why,k){if(seen[o.t.id])return;seen[o.t.id]=1;out.push({s:o.s,c:o.c,t:o.t,why:why,k:k})};
+  var list=flat(ex).filter(function(o){return o.s.id===sx.s.id});
+  list.filter(function(o){return o.t.st<3&&weakCount[o.t.id]}).sort(function(a,b){return weakCount[b.t.id]-weakCount[a.t.id]}).forEach(function(o){push(o,'Marked weak in '+weakCount[o.t.id]+' mock'+(weakCount[o.t.id]>1?'s':''),'weak')});
+  list.filter(function(o){return o.t.st===1}).forEach(function(o){push(o,'Still learning - finish it','learn')});
+  list.filter(function(o){return o.t.st===0}).forEach(function(o){push(o,'Not started','new')});
+  list.filter(function(o){return o.t.st===2&&o.t.at&&diff(t,o.t.at)>=7}).forEach(function(o){push(o,'Done '+diff(t,o.t.at)+' days ago - revise','rev')});
+  return out.slice(0,limit);
+ }
+ var focus=[],seenF={};
+ targetSubs.forEach(function(sx){items(sx,6).forEach(function(i){if(!seenF[i.t.id]){seenF[i.t.id]=1;focus.push(i)}})});
+ focus.sort(function(a,b){var o={weak:0,learn:1,rev:2,new:3};return o[a.k]-o[b.k]});
+ var revDue=all.filter(function(o){return o.t.st===2&&o.t.at&&diff(t,o.t.at)>=7}).length;
+ return {all:all,n:n,total:total,done:done,rem:rem,daysLeft:daysLeft,finishBy:finishBy,toFinish:toFinish,exp:exp,pace:pace,subs:subs,lagging:lagging,focus:focus.slice(0,3),laggingItems:targetSubs.map(function(sx){return {sx:sx,list:items(sx,5)}}),weakCount:weakCount,mocks:mocks,revDue:revDue};
+}
+function spark(vals,w,h){
+ if(!vals.length)return '';w=w||140;h=h||40;
+ var pts=vals.map(function(v,i){var x=vals.length===1?w/2:4+i*(w-8)/(vals.length-1);var y=h-4-clamp(v,0,100)/100*(h-8);return [x,y]});
+ var line=pts.length>1?'<polyline fill="none" stroke="currentColor" stroke-width="2" points="'+pts.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ')+'"/>':'';
+ return '<svg class="asp-spark" viewBox="0 0 '+w+' '+h+'" width="'+w+'" height="'+h+'" role="img" aria-label="Trend">'+line+pts.map(function(p){return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="2.6" fill="currentColor"/>'}).join('')+'</svg>';
+}
+function badge(sx){
+ if(sx.status==='empty')return '<span class="asp-badge b-empty">No topics</span>';
+ if(sx.status==='ahead')return '<span class="asp-badge b-ahead">Ahead</span>';
+ if(sx.status==='ok')return '<span class="asp-badge b-ok">On track</span>';
+ var r=[];if(sx.behind)r.push('Behind schedule');if(sx.weak)r.push('Weak in mocks');return '<span class="asp-badge b-lag">'+r.join(' + ')+'</span>';
+}
+function bar(c,tot){
+ if(!tot)return '<div class="asp-bar"></div>';
+ return '<div class="asp-bar" role="img" aria-label="'+c[3]+' revised, '+c[2]+' done, '+c[1]+' learning, '+c[0]+' not started"><i class="s3" style="width:'+c[3]/tot*100+'%"></i><i class="s2" style="width:'+c[2]/tot*100+'%"></i><i class="s1" style="width:'+c[1]/tot*100+'%"></i></div>';
+}
+var pct0=function(v){return Math.round(v)+'%'};
+function examBar(){
+ var h='<div class="asp-exams">';
+ A.exams.forEach(function(e){h+='<button class="asp-chip'+(e.id===(cur()||{}).id?' on':'')+'" data-act="pick" data-id="'+e.id+'">'+esc(e.name)+'</button>'});
+ h+='<button class="asp-chip add" data-act="addExam">+ Add exam</button></div>';
+ if(ui.adding)h+=examForm(null);
+ return h;
+}
+function examForm(ex){
+ var d=ex?ex.date:addD(today(),90);
+ return '<div class="asp-card"><h3>'+(ex?'Edit exam':'Add an exam')+'</h3><label class="asp-l">Exam name<input id="asp-xname" maxlength="80" placeholder="e.g. NEET 2027, JEE Main, UPSC, Board exam" value="'+esc(ex?ex.name:'')+'"></label><label class="asp-l">Exam date<input id="asp-xdate" type="date" value="'+d+'"></label>'+(ex?'<label class="asp-l">Revision buffer (days kept free at the end for revision)<input id="asp-xbuf" type="number" min="0" max="180" value="'+ex.buffer+'"></label>':'')+'<div class="asp-row"><button class="primary" data-act="'+(ex?'saveExam':'newExam')+'">'+(ex?'Save changes':'Add exam')+'</button><button data-act="cancelExam">Cancel</button>'+(ex?'<button class="asp-danger" data-act="delExam">Delete exam</button>':'')+'</div>'+(ui.msg?'<p class="asp-err">'+esc(ui.msg)+'</p>':'')+'</div>';
+}
+function welcome(){
+ return '<div class="asp-card asp-hero"><small class="eyebrow">ASPIRANTS SECTION</small><h2>Track any exam</h2><p class="hint">Add your exam and its date (NEET, JEE, UPSC, boards, anything). Then add your subjects and topics, tick them off, log mock tests, and see exactly where you are lagging. Everything stays on this phone.</p></div>'+examForm(null).replace('data-act="cancelExam">Cancel</button>','data-act="noop" hidden>Cancel</button>');
+}
+function overview(ex,an){
+ var h='',left=an.daysLeft;
+ var big=left>0?left:(left===0?'0':Math.abs(left)),lab=left>0?(left===1?'day left':'days left'):(left===0?'Exam day!':(Math.abs(left)===1?'day since the exam':'days since the exam'));
+ h+='<div class="asp-card asp-count"><div><small class="eyebrow">COUNTDOWN</small><div class="asp-big">'+big+'</div><div class="asp-lab">'+lab+'</div></div><div class="asp-meta"><b>'+esc(ex.name)+'</b><span>'+pretty(ex.date)+'</span>'+(left>6?'<span>About '+Math.floor(left/7)+' weeks '+left%7+' days</span>':'')+'<button data-act="cfgExam" aria-label="Edit exam">Edit exam</button></div></div>';
+ if(ui.cfgOpen)h+=examForm(ex);
+ if(!an.total){h+='<div class="asp-card"><h3>Next step: add your syllabus</h3><p class="hint">Open the Syllabus tab, add a subject, then paste your topic list. The progress, pace and lagging detector start working as soon as topics exist.</p><button class="primary" data-sub="Syllabus">Go to Syllabus</button></div>';return h}
+ var p=an.done/an.total*100;
+ h+='<div class="asp-card asp-prog"><div class="asp-ring" style="--p:'+p+'%"><b>'+pct0(p)+'</b></div><div class="asp-stats"><div><b>'+an.done+'</b><small>done</small></div><div><b>'+an.rem+'</b><small>remaining</small></div><div><b>'+an.n[1]+'</b><small>learning</small></div><div><b>'+an.total+'</b><small>total topics</small></div></div></div>';
+ var paceTxt;
+ if(an.rem===0)paceTxt='Whole syllabus is done. Use the time to revise and take mocks.';
+ else if(left<0)paceTxt='The exam date has passed. Edit the exam date or add a new exam.';
+ else if(an.toFinish>0)paceTxt='To finish the syllabus by <b>'+pretty(an.finishBy)+'</b> ('+an.toFinish+' days), complete about <b>'+an.pace+' topic'+(an.pace>1?'s':'')+' a day</b>. The last '+ex.buffer+' days are kept for revision.';
+ else paceTxt='The revision buffer has started and <b>'+an.rem+' topics</b> are still left. Finish the most important ones first.';
+ h+='<div class="asp-card"><h3>Your pace</h3><p>'+paceTxt+'</p><p class="hint">Time passed toward the finish date: '+pct0(an.exp)+'. Your syllabus done: '+pct0(p)+'.'+(an.revDue?' '+an.revDue+' done topic'+(an.revDue>1?'s are':' is')+' due for revision (7+ days old).':'')+'</p></div>';
+ h+='<div class="asp-card"><h3>Subjects</h3>';
+ an.subs.forEach(function(sx){h+='<div class="asp-subrow"><div class="asp-subtop"><b>'+esc(sx.s.name)+'</b>'+badge(sx)+'</div>'+bar(sx.c,sx.tot)+'<small>'+(sx.tot?pct0(sx.pct)+' done ('+sx.dn+' of '+sx.tot+')'+(sx.avg!=null?' · mock avg '+pct0(sx.avg):''):'Add topics in Syllabus')+'</small></div>'});
+ h+='<div class="asp-legend"><i class="s3"></i>Revised <i class="s2"></i>Done <i class="s1"></i>Learning</div></div>';
+ h+='<div class="asp-card"><h3>Focus today</h3>';
+ if(!an.focus.length)h+='<p class="hint">Nothing urgent. Everything is done or on track. Keep revising and logging mocks.</p>';
+ else{h+='<p class="hint">Picked from the subject you are lagging in most. Tap the button to move a topic forward.</p>';an.focus.forEach(function(f){h+='<div class="asp-focus"><div><b>'+esc(f.t.name)+'</b><small>'+esc(f.s.name)+' · '+esc(f.c.name)+' · '+esc(f.why)+'</small></div><button class="primary" data-act="adv" data-id="'+f.t.id+'">'+(f.t.st===0?'Start':f.t.st===1?'Done':'Revised')+'</button></div>'})}
+ h+='</div>';
+ h+='<div class="asp-card"><h3>Where you are lagging</h3>';
+ if(!an.lagging.length)h+='<p class="hint">No subject is behind schedule or weak in mocks right now.'+(an.mocks.length?'':' Log a mock test to check strength too.')+'</p>';
+ else an.lagging.forEach(function(sx){h+='<p><b>'+esc(sx.s.name)+'</b> · '+badge(sx)+'</p><p class="hint">'+(sx.behind?'Should be about '+pct0(an.exp)+' done by now, you are at '+pct0(sx.pct)+'. ':'')+(sx.weak?'Last mocks average '+pct0(sx.avg)+'.':'')+'</p>'});
+ an.laggingItems.forEach(function(li){if(!li.sx.tot){h+='<p class="hint">Add topics for '+esc(li.sx.s.name)+' in Syllabus so the app can tell you what to work on.</p>'}if(li.list.length){h+='<h4>Topics to work on in '+esc(li.sx.s.name)+'</h4>';li.list.forEach(function(f){h+='<div class="asp-focus sm"><div><b>'+esc(f.t.name)+'</b><small>'+esc(f.c.name)+' · '+esc(f.why)+'</small></div></div>'})}});
+ h+='<p class="hint">How this is decided: a subject is flagged when it is more than 10 points behind where the calendar says you should be, or when its last 3 mock scores average below 50%.</p></div>';
+ return h;
+}
+function editRow(kind,id,val,label){
+ return '<div class="asp-edit"><input id="asp-ein" maxlength="140" value="'+esc(val)+'" aria-label="'+label+'" data-enter="saveEdit"><button class="primary" data-act="saveEdit">Save</button><button data-act="cancelEdit">Cancel</button></div>';
+}
+var isEdit=function(k,id){return ui.edit&&ui.edit.k===k&&ui.edit.id===id};
+function syllabus(ex,an){
+ var h='<div class="asp-card"><h3>Add a subject</h3><div class="asp-edit"><input id="asp-subname" maxlength="80" placeholder="e.g. Physics" aria-label="Subject name" data-enter="addSubj"><button class="primary" data-act="addSubj">Add</button></div></div>';
+ if(!ex.subjects.length)return h+'<p class="hint">Start with your subjects (like Physics, Chemistry, Biology). Then add topics under each.</p>';
+ h+='<div class="asp-card"><h3>Quick add topics</h3><label class="asp-l">Subject<select id="asp-qsub">'+ex.subjects.map(function(s){return '<option value="'+s.id+'"'+(ui.qsub===s.id?' selected':'')+'>'+esc(s.name)+'</option>'}).join('')+'</select></label><textarea id="asp-qtext" rows="6" maxlength="30000" aria-label="Topics, one per line" placeholder="# Mechanics\nUnits and measurements\nMotion in a straight line\n# Thermodynamics\nLaws of thermodynamics"></textarea><p class="hint">One topic per line. A line starting with # is a chapter name. Paste a whole list at once.</p><button class="primary" data-act="quick">Add topics</button></div>';
+ var fl=['all','0','1','2','3','weak'],fn={all:'All',0:'Not started',1:'Learning',2:'Done',3:'Revised',weak:'Weak in mocks'};
+ h+='<div class="asp-exams">'+fl.map(function(f){return '<button class="asp-chip'+(ui.filter===f?' on':'')+'" data-act="filter" data-f="'+f+'">'+fn[f]+'</button>'}).join('')+'</div><p class="hint">Tap a status button to move a topic: Not started, Learning, Done, Revised.</p>';
+ var show=function(t){return ui.filter==='all'||(ui.filter==='weak'?(an.weakCount[t.id]&&t.st<3):String(t.st)===ui.filter)};
+ an.subs.forEach(function(sx){
+  if(ui.filter!=='all'&&!sx.s.chapters.some(function(c){return c.topics.some(show)}))return;
+  var s=sx.s,open=ui.open[s.id]!==false&&(ui.open[s.id]||ex.subjects.length===1||ui.filter!=='all');
+  h+='<div class="asp-card asp-subj"><div class="asp-subtop"><button class="asp-fold" data-act="fold" data-id="'+s.id+'" aria-expanded="'+!!open+'">'+(open?'▾':'▸')+' '+(isEdit('subj',s.id)?'':esc(s.name))+'</button>'+(isEdit('subj',s.id)?'':badge(sx))+'</div>';
+  if(isEdit('subj',s.id))h+=editRow('subj',s.id,s.name,'Subject name');
+  h+=bar(sx.c,sx.tot)+'<small>'+(sx.tot?pct0(sx.pct)+' done · '+sx.dn+' of '+sx.tot:'No topics yet')+'</small>';
+  if(open){
+   h+='<div class="asp-tools"><button data-act="edit" data-k="subj" data-id="'+s.id+'">Rename</button><button class="asp-danger" data-act="delSubj" data-id="'+s.id+'">Delete subject</button></div>';
+   s.chapters.forEach(function(c){
+    var vis=c.topics.filter(show);if(ui.filter!=='all'&&!vis.length)return;
+    h+='<div class="asp-chap"><div class="asp-chaphead">'+(isEdit('chap',c.id)?'':'<b>'+esc(c.name)+'</b>')+'<span class="asp-mini"><button data-act="edit" data-k="chap" data-id="'+c.id+'" aria-label="Rename chapter">✎</button><button class="asp-danger" data-act="delChap" data-id="'+c.id+'" aria-label="Delete chapter">✕</button></span></div>';
+    if(isEdit('chap',c.id))h+=editRow('chap',c.id,c.name,'Chapter name');
+    vis.forEach(function(t){
+     h+='<div class="asp-topic">'+(isEdit('topic',t.id)?editRow('topic',t.id,t.name,'Topic name'):'<button class="asp-st s'+t.st+'" data-act="adv" data-id="'+t.id+'" aria-label="Status: '+ST[t.st]+'. Tap to change">'+ST[t.st]+'</button><span class="asp-tn">'+esc(t.name)+(an.weakCount[t.id]&&t.st<3?' <em>weak</em>':'')+'</span><span class="asp-mini"><button data-act="edit" data-k="topic" data-id="'+t.id+'" aria-label="Rename topic">✎</button><button class="asp-danger" data-act="delTopic" data-id="'+t.id+'" aria-label="Delete topic">✕</button></span>')+'</div>';
+    });
+    if(ui.filter==='all')h+='<div class="asp-edit"><input id="asp-nt-'+c.id+'" maxlength="140" placeholder="Add a topic to this chapter" aria-label="New topic" data-enter="addTopic" data-id="'+c.id+'"><button data-act="addTopic" data-id="'+c.id+'">Add</button></div>';
+    h+='</div>';
+   });
+   if(ui.filter==='all')h+='<div class="asp-edit"><input id="asp-nc-'+s.id+'" maxlength="100" placeholder="Add a chapter" aria-label="New chapter" data-enter="addChap" data-id="'+s.id+'"><button data-act="addChap" data-id="'+s.id+'">Add chapter</button></div>';
+  }
+  h+='</div>';
+ });
+ return h;
+}
+function mocks(ex,an){
+ var h='';
+ if(!ex.subjects.length)return '<div class="asp-card"><p class="hint">Add subjects in the Syllabus tab first. Mock scores are logged subject by subject.</p><button class="primary" data-sub="Syllabus">Go to Syllabus</button></div>';
+ var last=an.mocks[an.mocks.length-1],n=ex.mocks.length+1;
+ h+='<div class="asp-card"><h3>Log a mock test</h3><label class="asp-l">Test name<input id="asp-mname" maxlength="80" value="Mock '+n+'"></label><label class="asp-l">Date<input id="asp-mdate" type="date" max="'+today()+'" value="'+today()+'"></label><p class="hint">Enter marks you got and the maximum for each subject. Leave a subject empty if it was not in this test.</p>';
+ ex.subjects.forEach(function(s){var lx=last&&last.scores[s.id]?last.scores[s.id].x:'';h+='<div class="asp-score"><b>'+esc(s.name)+'</b><input id="asp-m-'+s.id+'" type="number" step="any" inputmode="decimal" placeholder="Marks" aria-label="'+esc(s.name)+' marks"><span>/</span><input id="asp-x-'+s.id+'" type="number" step="any" min="1" inputmode="decimal" placeholder="Max" value="'+lx+'" aria-label="'+esc(s.name)+' maximum marks"></div>'});
+ var pend=an.all.filter(function(o){return o.t.st<3});
+ if(pend.length){h+='<details class="asp-weak"><summary>Mark weak topics (optional)</summary><p class="hint">Topics you struggled with in this test. They get priority in Focus today.</p>';
+  ex.subjects.forEach(function(s){var ts=pend.filter(function(o){return o.s.id===s.id});if(!ts.length)return;h+='<h4>'+esc(s.name)+'</h4>';ts.slice(0,300).forEach(function(o){h+='<label class="asp-chk"><input type="checkbox" class="asp-wt" value="'+o.t.id+'"> '+esc(o.t.name)+'</label>'})});
+  h+='</details>'}
+ h+='<button class="primary" data-act="addMock">Save mock test</button>'+(ui.msg?'<p class="asp-err">'+esc(ui.msg)+'</p>':'')+'</div>';
+ if(!an.mocks.length)return h+'<p class="hint">No mock tests yet. Log your first one above to see subject-wise trends.</p>';
+ var tv=an.mocks.map(totalPct).filter(function(v){return v!=null});
+ h+='<div class="asp-card"><h3>Subject-wise results</h3><div class="asp-trow asp-th"><span>Subject</span><span>Avg</span><span>Last</span><span>Best</span><span>Trend</span></div>';
+ var tavg=tv.reduce(function(a,b){return a+b},0)/tv.length;
+ h+='<div class="asp-trow"><b>Overall</b><span>'+pct0(tavg)+'</span><span>'+pct0(tv[tv.length-1])+'</span><span>'+pct0(Math.max.apply(null,tv))+'</span><span>'+spark(tv,90,30)+'</span></div>';
+ ex.subjects.forEach(function(s){
+  var v=an.mocks.map(function(m){return mockPct(m,s.id)}).filter(function(x){return x!=null});if(!v.length)return;
+  var avg=v.reduce(function(a,b){return a+b},0)/v.length,d=v.length>1?v[v.length-1]-v[v.length-2]:0;
+  h+='<div class="asp-trow"><b>'+esc(s.name)+'</b><span>'+pct0(avg)+'</span><span>'+pct0(v[v.length-1])+(v.length>1?'<em class="'+(d>=0?'up':'dn')+'">'+(d>=0?'▲':'▼')+Math.round(Math.abs(d))+'</em>':'')+'</span><span>'+pct0(Math.max.apply(null,v))+'</span><span>'+spark(v,90,30)+'</span></div>';
+ });
+ var weakest=an.subs.filter(function(x){return x.avg!=null}).sort(function(a,b){return a.avg-b.avg})[0],best=an.subs.filter(function(x){return x.avg!=null}).sort(function(a,b){return b.avg-a.avg})[0];
+ if(weakest&&best&&weakest!==best)h+='<p class="hint">Weakest subject lately: <b>'+esc(weakest.s.name)+'</b> ('+pct0(weakest.avg)+'). Strongest: <b>'+esc(best.s.name)+'</b> ('+pct0(best.avg)+'). Based on the last 3 tests per subject.</p>';
+ h+='</div><div class="asp-card"><h3>All tests</h3>';
+ an.mocks.slice().reverse().forEach(function(m){
+  var tp=totalPct(m);
+  h+='<div class="asp-mock"><div class="asp-subtop"><b>'+esc(m.name)+'</b><span>'+(tp!=null?pct0(tp):'')+'</span></div><small>'+pretty(m.date)+'</small><small>'+ex.subjects.filter(function(s){return m.scores[s.id]}).map(function(s){var v=m.scores[s.id];return esc(s.name)+' '+v.m+'/'+v.x}).join(' · ')+'</small>';
+  var wk=m.weak.map(function(i){var o=an.all.find(function(a){return a.t.id===i});return o?esc(o.t.name):null}).filter(Boolean);
+  if(wk.length)h+='<small>Weak: '+wk.join(', ')+'</small>';
+  h+='<button class="asp-danger" data-act="delMock" data-id="'+m.id+'">Delete</button></div>';
+ });
+ return h+'</div>';
+}
+function view(){
+ var h='<div class="asp">';
+ if(!A.exams.length)return h+welcome()+'</div>';
+ var ex=cur(),an=analyze(ex);
+ h+=examBar();
+ var tabs=['Overview','Syllabus','Mocks'];
+ h+='<div class="asp-sub">'+tabs.map(function(t){return '<button class="'+(ui.sub===t?'on':'')+'" data-sub="'+t+'">'+t+'</button>'}).join('')+'</div>';
+ if(okMsg)h+='<p class="asp-ok">'+esc(okMsg)+'</p>';
+ if(ui.msg&&!ui.adding&&!ui.cfgOpen&&ui.sub!=='Mocks')h+='<p class="asp-err">'+esc(ui.msg)+'</p>';
+ h+=ui.sub==='Overview'?overview(ex,an):ui.sub==='Syllabus'?syllabus(ex,an):mocks(ex,an);
+ return h+'</div>';
+}
+function ok(){var e=mount&&mount.querySelector('.asp-ok');if(e&&e.scrollIntoView)e.scrollIntoView({block:'center'})}
+function R(){if(!mount)return;var y=mount.closest?window.scrollY:0;mount.innerHTML=view();window.scrollTo(0,y)}
+function topicFind(ex,id){var r=null;ex.subjects.forEach(function(s){s.chapters.forEach(function(c){c.topics.forEach(function(t){if(t.id===id)r={s:s,c:c,t:t}})})});return r}
+function inp(id){var e=mount.querySelector('#'+id);return e?e.value:''}
+function parseDate(v){return DATE.test(v)&&!isNaN(Date.parse(v+'T12:00:00Z'))}
+function handle(act,b){
+ var ex=cur(),id=b.dataset.id?+b.dataset.id:null;ui.msg='';okMsg='';
+ if(act==='addExam'){ui.adding=!ui.adding;ui.cfgOpen=false;return R()}
+ if(act==='cancelExam'){ui.adding=false;ui.cfgOpen=false;return R()}
+ if(act==='noop')return;
+ if(act==='newExam'){
+  var name=inp('asp-xname').trim().slice(0,80),date=inp('asp-xdate');
+  if(!name){ui.msg='Enter the exam name.';return R()}
+  if(!parseDate(date)){ui.msg='Pick the exam date.';return R()}
+  var st=today(),buf=clamp(Math.floor(diff(date,st)/4),0,15),e={id:nid(),name:name,date:date,start:st,buffer:buf,subjects:[],mocks:[]};
+  A.exams.push(e);A.active=e.id;ui.adding=false;ui.sub='Overview';ui.cfgOpen=false;save();return R();
+ }
+ if(!ex)return;
+ if(act==='pick'){A.active=id;ui.adding=false;ui.cfgOpen=false;ui.edit=null;save();return R()}
+ if(act==='cfgExam'){ui.cfgOpen=!ui.cfgOpen;ui.adding=false;return R()}
+ if(act==='saveExam'){
+  var n2=inp('asp-xname').trim().slice(0,80),d2=inp('asp-xdate'),bf=parseInt(inp('asp-xbuf'),10);
+  if(!n2){ui.msg='Enter the exam name.';return R()}
+  if(!parseDate(d2)){ui.msg='Pick the exam date.';return R()}
+  ex.name=n2;ex.date=d2;ex.buffer=isNaN(bf)?ex.buffer:clamp(bf,0,180);ui.cfgOpen=false;save();return R();
+ }
+ if(act==='delExam'){if(confirm('Delete "'+ex.name+'" with all its subjects, topics and mock tests? This cannot be undone.')){A.exams=A.exams.filter(function(e){return e.id!==ex.id});A.active=A.exams[0]?A.exams[0].id:null;ui.cfgOpen=false;save();R()}return}
+ if(act==='fold'){ui.open[id]=!(ui.open[id]!==false&&(ui.open[id]||ex.subjects.length===1||ui.filter!=='all'));return R()}
+ if(act==='filter'){ui.filter=b.dataset.f;return R()}
+ if(act==='addSubj'){var sn=inp('asp-subname').trim().slice(0,80);if(!sn)return;if(ex.subjects.some(function(s){return s.name.toLowerCase()===sn.toLowerCase()})){ui.msg='That subject already exists.';return R()}var s={id:nid(),name:sn,chapters:[]};ex.subjects.push(s);ui.open[s.id]=true;save();return R()}
+ if(act==='addChap'){var cn=inp('asp-nc-'+id).trim().slice(0,100),sj=ex.subjects.find(function(s){return s.id===id});if(!cn||!sj)return;sj.chapters.push({id:nid(),name:cn,topics:[]});save();return R()}
+ if(act==='addTopic'){var tn=inp('asp-nt-'+id).trim().slice(0,140);if(!tn)return;ex.subjects.forEach(function(s){s.chapters.forEach(function(c){if(c.id===id)c.topics.push({id:nid(),name:tn,st:0,at:null})})});save();return R()}
+ if(act==='quick'){
+  var sid=+inp('asp-qsub'),sj2=ex.subjects.find(function(s){return s.id===sid}),txt=inp('asp-qtext');
+  if(!sj2||!txt.trim()){ui.msg='Paste your topics first.';return R()}
+  var chap=null,added=0,total=flat(ex).length;ui.qsub=sid;
+  txt.split(/\r?\n/).slice(0,2000).forEach(function(line){
+   line=line.trim();if(!line)return;
+   if(line[0]==='#'){var nm=line.replace(/^#+\s*/,'').slice(0,100)||'General';chap=sj2.chapters.find(function(c){return c.name.toLowerCase()===nm.toLowerCase()})||(sj2.chapters.push({id:nid(),name:nm,topics:[]}),sj2.chapters[sj2.chapters.length-1]);return}
+   var tn2=line.replace(/^([-*•]|\d+[.)])\s+/,'').slice(0,140);if(!tn2)return;
+   if(total+added>=3000)return;
+   if(!chap){chap=sj2.chapters.find(function(c){return c.name==='General'})||(sj2.chapters.push({id:nid(),name:'General',topics:[]}),sj2.chapters[sj2.chapters.length-1])}
+   chap.topics.push({id:nid(),name:tn2,st:0,at:null});added++;
+  });
+  ui.open[sid]=true;ui.msg=added?'':'No topics found in the text.';if(added)okMsg='Added '+added+' topic'+(added>1?'s':'')+' to '+sj2.name+'.';save();R();return ok();
+ }
+ if(act==='edit'){ui.edit={k:b.dataset.k,id:id};R();var e2=mount.querySelector('#asp-ein');if(e2){e2.focus();e2.select&&e2.select()}return}
+ if(act==='cancelEdit'){ui.edit=null;return R()}
+ if(act==='saveEdit'){
+  var v=inp('asp-ein').trim();if(!v||!ui.edit){return}var k=ui.edit.k,i2=ui.edit.id;
+  if(k==='subj'){var sj3=ex.subjects.find(function(s){return s.id===i2});if(sj3)sj3.name=v.slice(0,80)}
+  if(k==='chap')ex.subjects.forEach(function(s){s.chapters.forEach(function(c){if(c.id===i2)c.name=v.slice(0,100)})});
+  if(k==='topic'){var f=topicFind(ex,i2);if(f)f.t.name=v.slice(0,140)}
+  ui.edit=null;save();return R();
+ }
+ if(act==='adv'){var f2=topicFind(ex,id);if(!f2)return;f2.t.st=(f2.t.st+1)%4;f2.t.at=f2.t.st>=2?today():null;if(f2.t.st===0)f2.t.at=null;save();return R()}
+ if(act==='delTopic'){var f3=topicFind(ex,id);if(f3&&confirm('Delete topic "'+f3.t.name+'"?')){f3.c.topics=f3.c.topics.filter(function(t){return t.id!==id});save();R()}return}
+ if(act==='delChap'){ex.subjects.forEach(function(s){var c=s.chapters.find(function(c2){return c2.id===id});if(c&&confirm('Delete chapter "'+c.name+'" and its '+c.topics.length+' topics?')){s.chapters=s.chapters.filter(function(c2){return c2.id!==id});save();R()}});return}
+ if(act==='delSubj'){var sj4=ex.subjects.find(function(s){return s.id===id});if(sj4&&confirm('Delete subject "'+sj4.name+'" with all its topics and its mock scores?')){ex.subjects=ex.subjects.filter(function(s){return s.id!==id});ex.mocks.forEach(function(m){delete m.scores[id]});ex.mocks=ex.mocks.filter(function(m){return Object.keys(m.scores).length});save();R()}return}
+ if(act==='addMock'){
+  var mn=inp('asp-mname').trim().slice(0,80)||'Mock test',md=inp('asp-mdate'),sc={},bad='';
+  if(!parseDate(md)){ui.msg='Pick the test date.';return R()}
+  ex.subjects.forEach(function(s){
+   var mv=inp('asp-m-'+s.id).trim(),xv=inp('asp-x-'+s.id).trim();if(!mv&&!xv)return;
+   var m=parseFloat(mv),x=parseFloat(xv);
+   if(isNaN(m)||isNaN(x)||x<=0){bad=s.name+': enter both marks and the maximum.';return}
+   if(m>x||m<-x){bad=s.name+': marks cannot be more than the maximum.';return}
+   sc[s.id]={m:m,x:x};
+  });
+  if(bad){ui.msg=bad;return R()}
+  if(!Object.keys(sc).length){ui.msg='Enter marks for at least one subject.';return R()}
+  var weak=[].slice.call(mount.querySelectorAll('.asp-wt:checked')).map(function(c){return +c.value});
+  ex.mocks.push({id:nid(),name:mn,date:md,scores:sc,weak:weak});ui.sub='Mocks';okMsg='Mock test saved.';save();R();return ok();
+ }
+ if(act==='delMock'){if(confirm('Delete this mock test?')){ex.mocks=ex.mocks.filter(function(m){return m.id!==id});save();R()}return}
+}
+window.Asp={
+ mount:function(el){mount=el;if(!el)return;if(!el.__asp){el.__asp=1;
+  el.addEventListener('click',function(e){
+   var s=e.target.closest('[data-sub]');if(s&&el.contains(s)){e.stopPropagation();ui.sub=s.dataset.sub;ui.edit=null;ui.msg='';R();return}
+   var b=e.target.closest('[data-act]');if(!b||!el.contains(b))return;e.stopPropagation();e.preventDefault();handle(b.dataset.act,b);
+  });
+  el.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.dataset&&e.target.dataset.enter){e.preventDefault();e.stopPropagation();handle(e.target.dataset.enter,e.target)}});
+ }R();try{var on=document.querySelector('.life nav .on');if(on&&on.parentNode)on.parentNode.scrollLeft=Math.max(0,on.offsetLeft-24)}catch(e){}},
+ get:function(){return JSON.parse(JSON.stringify(A))},
+ set:function(x){if(!valid(x))return false;A=JSON.parse(JSON.stringify(x));ui.edit=null;ui.adding=false;ui.cfgOpen=false;save();R();return true},
+ valid:valid
+};
+load();
+})();
+</script><script>(() => {
   // life-friends/src/data.js
   var habits = [];
 
@@ -52,14 +352,15 @@
       const k = add(`${y}-01-01`, n), c = count(cfg2, log2, k), den = due(cfg2, k), level = c ? Math.ceil(c / Math.max(1, den) * 4) : 0;
       squares += `<button class="sq l${level} ${k === d ? "chosen" : ""} ${k > t ? "future" : ""}" data-date="${k}" title="${k}: ${c}/${den}" aria-label="${k}: ${c} of ${den}" ${k > t ? "disabled" : ""}></button>`;
     }
-    return `<div class="life" data-theme="${cfg2.theme}"><header><div><small class="eyebrow">YOUR LIFE, ONE DAY AT A TIME</small><h1>Life tracker<span>\u221E</span></h1><p class="welcome">${cfg2.displayName ? `Welcome, ${esc(cfg2.displayName)}.` : "Welcome. Make this space yours."}</p></div><button data-action="theme" aria-label="Switch color theme">${cfg2.theme === "dark" ? "\u2600" : "\u263E"}</button></header><div class="quote"><small>YOUR DAILY SPARK</small><p>${esc(dailyQuote())}</p><small>Changes daily \xB7 built-in offline rotation</small></div>${!cfg2.displayName ? `<section class="setup"><h2>What should we call you?</h2><p class="hint">A local profile, not an online account. You can change it anytime in Profile.</p><form id="profileForm"><input id="displayName" aria-label="Your name" maxlength="40" required placeholder="Your name"><button class="primary" type="submit">Save name</button></form></section>` : ""}<div class="hero"><div><small>DAILY RHYTHM</small><h2>${done}<span> / ${total}</span></h2><p>${d === t ? "Today" : esc(d)} \xB7 habits complete</p></div><div class="ring" style="--p:${total ? done / total * 100 : 0}%"><b>${total ? Math.round(done / total * 100) : 0}%</b></div></div><div class="metrics"><div><b>${streak(cfg2, log2)}</b><small>Current streak</small></div><div><b>${streak(cfg2, log2, null, true)}</b><small>Best streak</small></div><div><b>${days.length}</b><small>Active days</small></div></div><nav>${["Today", "Insights", "Habits", "Plan", "Profile", "Backup"].map((a) => `<button data-tab="${a}" aria-pressed="${ui2.tab === a}" class="${ui2.tab === a ? "on" : ""}">${a}</button>`).join("")}</nav><p class="status" role="status">${esc(status2)}</p>
+    return `<div class="life" data-theme="${cfg2.theme}"><header><div><small class="eyebrow">YOUR LIFE, ONE DAY AT A TIME</small><h1>Life tracker<span>\u221E</span></h1><p class="welcome">${cfg2.displayName ? `Welcome, ${esc(cfg2.displayName)}.` : "Welcome. Make this space yours."}</p></div><button data-action="theme" aria-label="Switch color theme">${cfg2.theme === "dark" ? "\u2600" : "\u263E"}</button></header><div class="quote"><small>YOUR DAILY SPARK</small><p>${esc(dailyQuote())}</p><small>Changes daily \xB7 built-in offline rotation</small></div>${!cfg2.displayName ? `<section class="setup"><h2>What should we call you?</h2><p class="hint">A local profile, not an online account. You can change it anytime in Profile.</p><form id="profileForm"><input id="displayName" aria-label="Your name" maxlength="40" required placeholder="Your name"><button class="primary" type="submit">Save name</button></form></section>` : ""}<div class="hero"><div><small>DAILY RHYTHM</small><h2>${done}<span> / ${total}</span></h2><p>${d === t ? "Today" : esc(d)} \xB7 habits complete</p></div><div class="ring" style="--p:${total ? done / total * 100 : 0}%"><b>${total ? Math.round(done / total * 100) : 0}%</b></div></div><div class="metrics"><div><b>${streak(cfg2, log2)}</b><small>Current streak</small></div><div><b>${streak(cfg2, log2, null, true)}</b><small>Best streak</small></div><div><b>${days.length}</b><small>Active days</small></div></div><nav>${["Today", "Insights", "Habits", "Plan", "Aspirants", "Profile", "Backup"].map((a) => `<button data-tab="${a}" aria-pressed="${ui2.tab === a}" class="${ui2.tab === a ? "on" : ""}">${a}</button>`).join("")}</nav><p class="status" role="status">${esc(status2)}</p>
 <section ${ui2.tab === "Today" ? "" : "hidden"}><div class="section-title"><h2>Your daily checklist</h2><button data-action="today">Today</button></div><div class="date-pick"><button data-action="prev" aria-label="Previous day">\u2039</button><input id="date" aria-label="Checklist date" type="date" min="${cfg2.start}" max="${t}" value="${d}"><button data-action="next" aria-label="Next day" ${d >= t ? "disabled" : ""}>\u203A</button></div>${cfg2.habits.filter((h) => active(h, d)).map((h) => `<label class="habit ${bit(log2, d, h.id) ? "checked" : ""}"><input data-check="${h.id}" type="checkbox" ${bit(log2, d, h.id) ? "checked" : ""} ${d > t ? "disabled" : ""}><span class="tick">${bit(log2, d, h.id) ? "\u2713" : ""}</span><span><b>${esc(h.name)}</b><small>${esc(h.time)}${h.time ? " \xB7 " : ""}${h.remind ? "\u23F0 " + esc(h.remind) + " \xB7 " : ""}${streak(cfg2, log2, h.id)} day streak</small>${bit(log2, d, h.id) ? tickLabel(d, h.id) : ""}</span></label>`).join("") || "<p>No habits for this date. Add a habit in Habits.</p>"}<label class="journal">Daily reflection<textarea id="note" maxlength="240" placeholder="What worked? What is tomorrow\u2019s one priority?">${esc(notes2[d] || "")}</textarea></label><button class="primary" data-action="saveNote">Save reflection</button><p class="hint">All habits checked = one full day. An unfinished today does not break yesterday\u2019s streak.</p></section>
 <section ${ui2.tab === "Insights" || ui2.tab === "Today" ? "" : "hidden"}><div class="section-title"><h2>Your consistency</h2><div class="year-controls"><button data-action="yearPrev" aria-label="Previous year">\u2039</button><b>${y}</b><button data-action="yearNext" aria-label="Next year">\u203A</button></div></div><p class="hint">Yearly activity \xB7 tap a square to open its day</p><div class="heat-scroll"><div class="month-labels">Jan\u3000 Feb\u3000 Mar\u3000 Apr\u3000 May\u3000 Jun\u3000 Jul\u3000 Aug\u3000 Sep\u3000 Oct\u3000 Nov\u3000 Dec</div><div class="heat">${squares}</div></div><div class="legend">Less <i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i> More</div></section>
 <section ${ui2.tab === "Insights" ? "" : "hidden"}><h2>By the numbers</h2><div class="metrics"><div><b>${checks}</b><small>Total check-ins</small></div><div><b>${possible ? Math.round(hit / possible * 100) : 0}%</b><small>Last 30 days</small></div><div><b>${days.filter((d2) => full(cfg2, log2, d2)).length}</b><small>Full days</small></div></div><h3>Habit streaks</h3>${live.map((h) => `<div class="stat-row"><b>${esc(h.name)}</b><span>${streak(cfg2, log2, h.id)} now \xB7 ${streak(cfg2, log2, h.id, true)} best</span></div>`).join("")}<p class="hint">Rates use habits scheduled on each date. Renaming a habit preserves its check-ins. Archive starts tomorrow, so today\u2019s history stays intact.</p></section>
 <section ${ui2.tab === "Habits" ? "" : "hidden"}><div class="section-title"><h2>Make it yours</h2><span>${live.length} active</span></div><div class="pingstatus"></div><form id="habitForm"><input id="name" maxlength="60" required placeholder="Habit name" aria-label="Habit name"><input id="time" maxlength="50" placeholder="Time or cue (optional)" aria-label="Time or cue"><label class="pinglabel">Ping me daily at (optional)<input id="remind" type="time" aria-label="Ping time"></label><input id="detail" maxlength="140" placeholder="A helpful note (optional)" aria-label="Helpful note"><button class="primary" type="submit">Add habit</button></form><p class="hint">Archive instead of deleting your progress. There is no fixed habit limit; export backups regularly.</p>${live.map((h) => `<div class="manage"><div><b>${esc(h.name)}</b><small>${esc(h.time)}<br>${esc(h.note)}${h.remind ? "<br>\u23F0 Ping " + esc(h.remind) : ""}</small></div><div><button data-edit="${h.id}">Edit</button><button data-archive="${h.id}" ${h.to ? "disabled" : ""}>${h.to ? "Ends tomorrow" : "Archive"}</button></div></div>`).join("")}<div id="editor"></div><details><summary>Archived habits</summary>${cfg2.habits.filter((h) => !active(h, t)).map((h) => `<div class="stat-row"><b>${esc(h.name)}</b><small>Archived ${esc(h.to)}</small></div>`).join("") || "<p>None yet.</p>"}</details></section>
 <section ${ui2.tab === "Plan" ? "" : "hidden"}><h2>Your plan &amp; timetable</h2><div class="pingstatus"></div><p class="hint">No starter plan. Add your own goals, daily timetable and weekly routine.</p><div class="plan-text">${esc(cfg2.customPlan || "Your plan is blank. Write it below.")}</div><form id="planForm"><label>Your plan<textarea id="customPlan" aria-label="Your plan" maxlength="8000" placeholder="My goals, timetable and weekly routine...">${esc(cfg2.customPlan || "")}</textarea></label><button class="primary" type="submit">Save plan</button></form><p class="hint">Saved with your backup. Up to 8,000 characters.</p><h2>Timed pings</h2><p class="hint">Add a daily ping for a timetable item. It rings at that time every day, even when the app is closed.</p><form id="pingForm"><input id="pingLabel" maxlength="60" required placeholder="What to ping (e.g. Study block)" aria-label="Ping text"><input id="pingTime" type="time" required aria-label="Ping time"><button class="primary" type="submit">Add ping</button></form>${(cfg2.pings || []).map((p) => `<div class="manage"><div><b>${esc(p.label)}</b><small>\u23F0 Daily at ${esc(p.time)}</small></div><div><button data-delping="${p.id}">Remove</button></div></div>`).join("") || "<p>No timed pings yet.</p>"}</section>
 <section ${ui2.tab === "Profile" ? "" : "hidden"}><h2>Your profile</h2><p class="hint">Change your welcome name. This is saved locally, with no login or password.</p>${cfg2.displayName ? `<form id="profileForm"><input id="displayName" aria-label="Your name" maxlength="40" required value="${esc(cfg2.displayName)}"><button class="primary" type="submit">Save name</button></form>` : "<p>Use the name setup above to begin.</p>"}</section>
-<section ${ui2.tab === "Backup" ? "" : "hidden"}><h2>Your data, your control</h2><p>Saved on this device only. No account or cloud sync. Pings are local notifications on this phone. Keep backups before clearing storage or changing devices.</p><button class="primary" data-action="export">Download JSON backup</button><label class="import">Restore a backup<input id="import" type="file" accept="application/json,.json"></label><p class="hint">Restore replaces this app\u2019s local habits, check-ins and reflections after confirmation. Offline and hosted copies do not sync. There is no end date; storage is finite. If a save fails, export before leaving.</p></section><footer>Start ${esc(cfg2.start)} \xB7 device local time \xB7 built for the long run</footer><div class="toast" aria-live="polite">${esc(ui2.toast || "")}</div></div>`;
+<section ${ui2.tab === "Backup" ? "" : "hidden"}><h2>Your data, your control</h2><p>Saved on this device only. No account or cloud sync. Pings are local notifications on this phone. Keep backups before clearing storage or changing devices.</p><button class="primary" data-action="export">Download JSON backup</button><label class="import">Restore a backup<input id="import" type="file" accept="application/json,.json"></label><p class="hint">Restore replaces this app\u2019s local habits, check-ins and reflections after confirmation. Offline and hosted copies do not sync. There is no end date; storage is finite. If a save fails, export before leaving.</p></section>
+<section ${ui2.tab === "Aspirants" ? "" : "hidden"}><div id="aspRoot"></div></section><footer>Start ${esc(cfg2.start)} \xB7 device local time \xB7 built for the long run</footer><div class="toast" aria-live="polite">${esc(ui2.toast || "")}</div></div>`;
   }
   function valid(x) {
     if (x?.cfg?.displayName !== void 0 && (typeof x.cfg.displayName !== "string" || x.cfg.displayName.length > 40)) return false;
@@ -144,8 +445,8 @@
         draw2();
       }
       if (a === "export") {
-        if(window.NativeBackup){window.NativeBackup.save(JSON.stringify({version:2,cfg:cfg2,log:log2,notes:notes2,stamps},null,2),`life-tracker-${today()}.json`);return;}
-const blob = new Blob([JSON.stringify({ version: 2, cfg: cfg2, log: log2, notes: notes2, stamps }, null, 2)], { type: "application/json" });
+        if(window.NativeBackup){window.NativeBackup.save(JSON.stringify({version:2,cfg:cfg2,log:log2,notes:notes2,stamps,aspirant:window.Asp?window.Asp.get():void 0},null,2),`life-tracker-${today()}.json`);return;}
+const blob = new Blob([JSON.stringify({ version: 2, cfg: cfg2, log: log2, notes: notes2, stamps, aspirant: window.Asp ? window.Asp.get() : void 0 }, null, 2)], { type: "application/json" });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
         link.download = `life-tracker-${today()}.json`;
@@ -176,6 +477,7 @@ const blob = new Blob([JSON.stringify({ version: 2, cfg: cfg2, log: log2, notes:
           if (confirm("Replace current local data with this backup? Export first if you need the current data.")) {
             ui2.date = today();
             save2({ cfg: x.cfg, log: x.log, notes: x.notes, stamps: x.stamps || {} });
+            if (x.aspirant) { if (!(window.Asp && window.Asp.set(x.aspirant))) { ui2.toast = "Habits restored, but the Aspirants data in this backup was invalid and was skipped."; draw2(); } }
           }
         } catch (err) {
           ui2.toast = "Backup is invalid. Nothing changed.";
@@ -232,6 +534,7 @@ const blob = new Blob([JSON.stringify({ version: 2, cfg: cfg2, log: log2, notes:
   var ui = { date: today(), year: +today().slice(0, 4), tab: "Today", toast: "" };
   function draw() {
     root.innerHTML = render(cfg, log, notes, ui, status);
+    if (window.Asp) window.Asp.mount(root.querySelector("#aspRoot"));
     refreshPingStatus();
   }
   function save(v) {
