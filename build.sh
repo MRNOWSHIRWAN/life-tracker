@@ -9,7 +9,7 @@ set -eu
 APP=app/src/main; OUT=build; rm -rf "$OUT"; mkdir -p "$OUT/gen" "$OUT/cls" "$OUT/dex"
 # The launcher icon is stored as text (app-icon.png.base64) so it is easy to review; decode it before packaging.
 base64 -d app-icon.png.base64 > "$APP/res/drawable/icon.png"
-"$BUILD_TOOLS/aapt" package -f -m -A "$APP/assets" -M "$APP/AndroidManifest.xml" -S "$APP/res" -I "$ANDROID_JAR" -J "$OUT/gen" -F "$OUT/base.apk" --min-sdk-version 26 --target-sdk-version 34 --version-code 4 --version-name 1.2.0
+"$BUILD_TOOLS/aapt" package -f -m -A "$APP/assets" -M "$APP/AndroidManifest.xml" -S "$APP/res" -I "$ANDROID_JAR" -J "$OUT/gen" -F "$OUT/base.apk" --min-sdk-version 26 --target-sdk-version 34 --version-code 5 --version-name 1.3.0
 javac --release 11 -cp "$ANDROID_JAR" -d "$OUT/cls" "$OUT/gen/com/lifetracker/app/R.java" $APP/java/com/lifetracker/app/*.java
 "$BUILD_TOOLS/d8" --release --min-api 26 --lib "$ANDROID_JAR" --output "$OUT/dex" $(find "$OUT/cls" -name '*.class')
 cp "$OUT/base.apk" "$OUT/unsigned.apk"
