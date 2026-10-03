@@ -139,17 +139,17 @@ If notifications are off, a banner with a Turn on button appears. Pings cannot s
 ### 15. Aspirants: overview (new in 1.3)
 Open the Aspirants tab and tap Add exam. Enter the exam name and its date. You get a day countdown, your syllabus progress, the daily pace needed, and a Focus today list.
 
-<img src="docs/screenshots/15-aspirants-overview.png" width="260" alt="Aspirants overview">
+<img src="docs/screenshots/4-aspirants-overview.png" width="260" alt="Aspirants overview">
 
 ### 16. Aspirants: syllabus
 Add subjects, then use Quick add topics: paste one topic per line, and start a line with # for a chapter name. Tap a status button to move a topic from Not started to Learning, Done and Revised. The app starts empty: you add your own exam, subjects and topics.
 
-<img src="docs/screenshots/16-aspirants-syllabus.png" width="260" alt="Aspirants syllabus">
+<img src="docs/screenshots/5-aspirants-syllabus.png" width="260" alt="Aspirants syllabus">
 
 ### 17. Aspirants: mock tests
 Log each mock test with marks and maximum per subject, and optionally mark weak topics. You get subject-wise average, last, best and a trend line. A subject is flagged as lagging when it is more than 10 points behind schedule, or its last 3 mock scores average below 50%.
 
-<img src="docs/screenshots/17-aspirants-mock-results.png" width="260" alt="Aspirants mock results">
+<img src="docs/screenshots/6-aspirants-mock-results.png" width="260" alt="Aspirants mock results">
 
 Aspirants data is saved on the phone and included in the JSON backup. You can add several exams and switch between them.
 
