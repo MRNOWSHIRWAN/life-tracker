@@ -8,7 +8,7 @@ A private, offline habit and daily-routine tracker for Android. No account, no i
 - Daily checklist with streaks, a year heatmap, insights and a daily reflection note.
 - Make your own habits: name, time or cue, note.
 - **Daily pings (new in 1.2):** set a time on any habit, or add timed pings in the Plan tab. You get a notification at that time every day, even when the app is closed. Pings come back after a reboot, a time change or an app update.
-- **Tick times (new in 1.2):** when you tick a habit, the app records and shows the time ("Ticked 9:41 PM").
+- **Tick times (new in 1.2):** when you tick a habit, the app records and shows the time ("Ticked 9:41 PM")
 - **Aspirants section (new in 1.3):** track any exam (NEET, JEE, UPSC, boards, anything you add). Exam countdown, syllabus tracker (subjects, chapters, topics with Not started / Learning / Done / Revised), progress and daily pace, a "Focus today" list, a lagging-subject detector, and a subject-wise mock test log with trends.
 - Your own name, plan and timetable. Light and dark theme.
 - JSON backup and restore.
